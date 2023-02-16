@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BebasNeueCyrillicRegular.ttf");
+}
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+        url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"), local("Gilroy-Semibold"), url("../fonts/Gilroy-Semibold.woff2") format("woff2"),
+        url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@mixin header {
+    font-family: "Bebas Neue", cursive;
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: -2px 2px 43px #3e6bf4;
+    line-height: 1;
+}
+@mixin gilroy {
+    font-family: "Gilroy";
+    font-style: normal;
+}
+@mixin headerSecondary {
+    @include gilroy;
+    line-height: 1.58;
+    text-transform: uppercase;
+}
+@mixin button {
+    background: $deepPink;
+    color: white;
+    border-radius: 5rem;
+    padding: 0.75rem 2rem;
+}

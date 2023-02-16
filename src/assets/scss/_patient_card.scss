@@ -1,0 +1,11 @@
+.patient-card {
+    
+    &_img {
+        padding-bottom: 65.4%;
+        display: grid;
+        place-items: center bottom;
+        img{
+            filter:  drop-shadow(2px 2px 2rem blue);
+        }
+    }
+}

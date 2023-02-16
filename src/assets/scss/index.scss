@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+@import "./animations";
+@import "./colors";
+@import "./mixins";
+
+h1,
+.header {
+    @include header;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+.lavender-grad {
+    background: #3a47bf;
+}
+.header {
+    text-shadow: none;
+}
+.gilroy {
+    @include gilroy;
+}
+h2 {
+    @include headerSecondary;
+}
+p {
+    @include gilroy;
+}
+.btn {
+    @include button;
+    &-transparent {
+        background: #fff;
+        border: 2px solid $pink;
+    }
+}
+.h {
+    &-100vh {
+        min-height: 100vh;
+    }
+}
+hr.bg-blue {
+    border-color: $blue;
+}
+.bg {
+    &-pink{
+        background: $deepPink;
+    }
+    &-lavender {
+        background: $lavender;
+    }
+    &-blue {
+        background: $blueGradient;
+        &-grad {
+            background: linear-gradient(180deg, #0f072c 0%, #092477 100%);
+        }
+    }
+    &-darkBlue {
+        background: $darkBlue;
+    }
+}
+.text {
+    &-pink {
+        color: $deepPink;
+        &-l {
+            color: $pink;
+        }
+    }
+    &-black {
+        color: $black;
+    }
+    &-blue {
+        color: $blue;
+    }
+}
+.glow {
+    box-shadow: -2px 2px 43px #3e6bf4;
+}
+.video {
+    background: linear-gradient(180deg, #0f072c 0%, #1f3cb0 100%);
+
+    box-shadow: 0px 22px 80px rgba(90, 6, 195, 0.07), 0px 9.19107px 33.4221px rgba(90, 6, 195, 0.0503198),
+        0px 4.91399px 17.869px rgba(90, 6, 195, 0.0417275), 0px 2.75474px 10.0172px rgba(90, 6, 195, 0.035),
+        0px 1.46302px 5.32008px rgba(90, 6, 195, 0.0282725), 0px 0.608796px 2.21381px rgba(90, 6, 195, 0.0196802);
+}
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+.footer-grid {
+    grid-template-columns: repeat(3, auto);
+}
+@import "./patient_card";
+@import "./faq";
