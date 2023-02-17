@@ -1,27 +1,41 @@
 {
   "files": {
-    "main.css": "/evushed/static/css/main.25708c7a.css",
-    "main.js": "/evushed/static/js/main.418d4d1d.js",
+    "main.css": "/evushed/static/css/main.acc9c0ac.css",
+    "main.js": "/evushed/static/js/main.340832d0.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
+    "static/media/doctor-2.png": "/evushed/static/media/doctor-2.f0f779cdda2ecace70ca.png",
     "static/media/doctor-1.png": "/evushed/static/media/doctor-1.32385884b784f2470c49.png",
+    "static/media/video-bg.jpg": "/evushed/static/media/video-bg.b4e77e8909524fbe05d1.jpg",
     "static/media/secBG.jpg": "/evushed/static/media/secBG.fa8a0de88c4d22a6ede4.jpg",
     "static/media/doctor-after.png": "/evushed/static/media/doctor-after.a18f5cbd030240e6db43.png",
+    "static/media/tela.png": "/evushed/static/media/tela.c39802c0e068d3fecc08.png",
+    "static/media/doctor-after-light.png": "/evushed/static/media/doctor-after-light.5b072c65f08bee61e3fa.png",
     "static/media/mainbg.jpg": "/evushed/static/media/mainbg.4e80a1e829c80bb644c4.jpg",
+    "static/media/banner.png": "/evushed/static/media/banner.12a30e227e1d447bdd26.png",
     "static/media/vacine.png": "/evushed/static/media/vacine.f3c2e374069900be1a88.png",
+    "static/media/patient5.png": "/evushed/static/media/patient5.089fdeb9679a6235adde.png",
+    "static/media/patient2.png": "/evushed/static/media/patient2.8719c345fb01769d70d9.png",
+    "static/media/patient4.png": "/evushed/static/media/patient4.543a4025f71b1e92f7a9.png",
+    "static/media/patient3.png": "/evushed/static/media/patient3.c41e25d79d024668ad8f.png",
     "static/media/Gilroy-Regular.ttf": "/evushed/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/Gilroy-Semibold.ttf": "/evushed/static/media/Gilroy-Semibold.41fa36c3c8e966b35423.ttf",
+    "static/media/patient1.png": "/evushed/static/media/patient1.a4c6a3cf9d400f9df41c.png",
     "static/media/BebasNeueCyrillicRegular.ttf": "/evushed/static/media/BebasNeueCyrillicRegular.f39fe92d35bac3b2fe60.ttf",
     "static/media/Gilroy-Semibold.woff": "/evushed/static/media/Gilroy-Semibold.5b042906a8b58ec4633e.woff",
     "static/media/Gilroy-Regular.woff": "/evushed/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
     "static/media/Gilroy-Semibold.woff2": "/evushed/static/media/Gilroy-Semibold.7726b19d33f1b7f4135a.woff2",
     "static/media/Gilroy-Regular.woff2": "/evushed/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "static/media/1.jpg": "/evushed/static/media/1.a395f8bb2856de5ceb5f.jpg",
+    "static/media/4.jpg": "/evushed/static/media/4.8eec867c051c39ca40d4.jpg",
+    "static/media/3.jpg": "/evushed/static/media/3.7782bc3984fae62c30fe.jpg",
+    "static/media/2.jpg": "/evushed/static/media/2.ffa64ee403ea19adecdc.jpg",
     "index.html": "/evushed/index.html",
-    "main.25708c7a.css.map": "/evushed/static/css/main.25708c7a.css.map",
-    "main.418d4d1d.js.map": "/evushed/static/js/main.418d4d1d.js.map",
+    "main.acc9c0ac.css.map": "/evushed/static/css/main.acc9c0ac.css.map",
+    "main.340832d0.js.map": "/evushed/static/js/main.340832d0.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25708c7a.css",
-    "static/js/main.418d4d1d.js"
+    "static/css/main.acc9c0ac.css",
+    "static/js/main.340832d0.js"
   ]
 }
