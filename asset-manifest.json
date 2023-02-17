@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/evushed/static/css/main.acc9c0ac.css",
-    "main.js": "/evushed/static/js/main.340832d0.js",
+    "main.css": "/evushed/static/css/main.2a0f2b38.css",
+    "main.js": "/evushed/static/js/main.5131852c.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
     "static/media/doctor-2.png": "/evushed/static/media/doctor-2.f0f779cdda2ecace70ca.png",
     "static/media/doctor-1.png": "/evushed/static/media/doctor-1.32385884b784f2470c49.png",
+    "static/media/raysbg.jpg": "/evushed/static/media/raysbg.8897074f7524ad466f40.jpg",
     "static/media/video-bg.jpg": "/evushed/static/media/video-bg.b4e77e8909524fbe05d1.jpg",
     "static/media/secBG.jpg": "/evushed/static/media/secBG.fa8a0de88c4d22a6ede4.jpg",
     "static/media/doctor-after.png": "/evushed/static/media/doctor-after.a18f5cbd030240e6db43.png",
@@ -12,6 +13,7 @@
     "static/media/doctor-after-light.png": "/evushed/static/media/doctor-after-light.5b072c65f08bee61e3fa.png",
     "static/media/mainbg.jpg": "/evushed/static/media/mainbg.4e80a1e829c80bb644c4.jpg",
     "static/media/banner.png": "/evushed/static/media/banner.12a30e227e1d447bdd26.png",
+    "static/media/raysLbg.jpg": "/evushed/static/media/raysLbg.329cb2c4d8eb31169331.jpg",
     "static/media/vacine.png": "/evushed/static/media/vacine.f3c2e374069900be1a88.png",
     "static/media/patient5.png": "/evushed/static/media/patient5.089fdeb9679a6235adde.png",
     "static/media/patient2.png": "/evushed/static/media/patient2.8719c345fb01769d70d9.png",
@@ -30,12 +32,12 @@
     "static/media/3.jpg": "/evushed/static/media/3.7782bc3984fae62c30fe.jpg",
     "static/media/2.jpg": "/evushed/static/media/2.ffa64ee403ea19adecdc.jpg",
     "index.html": "/evushed/index.html",
-    "main.acc9c0ac.css.map": "/evushed/static/css/main.acc9c0ac.css.map",
-    "main.340832d0.js.map": "/evushed/static/js/main.340832d0.js.map",
+    "main.2a0f2b38.css.map": "/evushed/static/css/main.2a0f2b38.css.map",
+    "main.5131852c.js.map": "/evushed/static/js/main.5131852c.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.acc9c0ac.css",
-    "static/js/main.340832d0.js"
+    "static/css/main.2a0f2b38.css",
+    "static/js/main.5131852c.js"
   ]
 }
