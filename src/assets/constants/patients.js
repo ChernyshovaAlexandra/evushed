@@ -1,6 +1,8 @@
 import P1 from '../images/patient1.png'
 import P2 from '../images/patient2.png'
 import P3 from '../images/patient3.png'
+import P4 from '../images/patient4.png'
+import P5 from '../images/patient5.png'
 
 
 export const patients = [
@@ -30,6 +32,13 @@ export const patients = [
         diagnose: 'Хроническая болезнь почек 4 стадии',
         process: 'Находится на гемодиализе',
         description: 'Хроническая болезнь почек (ХБП) часто характеризуется наличием сопутствующих заболеваний, совместно приводящих к нарушению работы иммунной системы 6',
-        img: ''
+        img: P4
+    },
+    {
+        name: 'Владимир, 51 год',
+        diagnose: 'Хроническая болезнь почек 4 стадии',
+        process: 'Находится на гемодиализе',
+        description: 'Хроническая болезнь почек (ХБП) часто характеризуется наличием сопутствующих заболеваний, совместно приводящих к нарушению работы иммунной системы 6',
+        img: P5
     }
 ]

@@ -1,7 +1,7 @@
 import React from "react";
 const Nav = () => {
     return (
-        <nav className="bg-white rounded-full fixed top-6 left-0 right-0 z-20 mx-auto w-11/12 p-4">
+        <nav className="bg-white rounded-full fixed top-6 left-0 right-0 z-30 mx-auto w-11/12 p-4">
             <div className="flex justify-between gap-4 items-center">
                 <div className="logo h-fit cursor-pointer">
                     <svg className="w-12 h-12 text-pink" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">

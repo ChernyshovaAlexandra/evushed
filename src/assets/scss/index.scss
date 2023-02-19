@@ -23,17 +23,67 @@ h1,
 .gilroy {
     @include gilroy;
 }
-h2 {
+.w {
+    &-42p {
+        width: 42%;
+    }
+}
+
+.doc-after {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: url(../images/doctor-after.png) no-repeat;
+        background-position: 0 0%;
+        display: block;
+        width: 39rem;
+        height: 53rem;
+        z-index: 120;
+        @media screen and (min-width: 1000px) {
+            width: 25rem;
+            height: 52rem;
+        }
+        @media screen and (min-width: 1600px) {
+            width: 36rem;
+        }
+    }
+    &-light {
+        &::after {
+            background: url(../images/doctor-after-light.png) no-repeat;
+            background-position: 0 0;
+            width: 31rem;
+            @media screen and (min-width: 1000px) {
+                width: 18rem;
+                height: 56rem;
+            }
+            @media screen and (min-width: 1600px) {
+                width: 34.5rem;
+            }
+        }
+    }
+}
+h2,
+.h2 {
     @include headerSecondary;
+    display: inline;
 }
 p {
     @include gilroy;
 }
 .btn {
     @include button;
+    &:hover {
+        background: #cc204e;
+    }
     &-transparent {
         background: #fff;
         border: 2px solid $pink;
+        &:hover {
+            background: #fbdde5;
+        }
     }
 }
 .h {
@@ -45,7 +95,7 @@ hr.bg-blue {
     border-color: $blue;
 }
 .bg {
-    &-pink{
+    &-pink {
         background: $deepPink;
     }
     &-lavender {

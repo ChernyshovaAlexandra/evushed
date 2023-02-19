@@ -14,8 +14,8 @@ const Accordeon = ({ data, id }) => {
                     {!opened ?
                         <svg className="w-6 h-6 shrink-0 text-pink" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" width="36" height="36" rx="12" fill="currentColor" />
-                            <path d="M8.5 18H28.5" stroke="white" stroke-width="4" />
-                            <path d="M18.5 28L18.5 8" stroke="white" stroke-width="4" />
+                            <path d="M8.5 18H28.5" stroke="white" strokeWidth="4" />
+                            <path d="M18.5 28L18.5 8" stroke="white" strokeWidth="4" />
                         </svg>
                         :
                         <svg className="w-6 h-6 shrink-0 text-pink" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,5 @@
 import React from "react";
-import Video from '../assets/images/video-bg.jpg'
+import Video from '../assets/images/video-bg.jpeg'
 
 const Block9 = () => {
     return (

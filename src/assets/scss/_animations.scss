@@ -1,0 +1,52 @@
+.rays {
+    // g.animated{
+    transform: scale(3);
+    animation: 0.5s appear 0.5s ease-in-out forwards;
+    transform-origin: center;
+    // }
+}
+.opacity {
+    animation: 0.5s opacity 0.75s ease-in forwards;
+    opacity: 0;
+}
+.disappear {
+    animation: 0.5s dissapear 0.75s ease-in forwards;
+}
+@keyframes appear {
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes opacity {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dissapear {
+    to {
+        opacity: 0;
+    }
+}
+.polygon {
+    clip-path: polygon(72% 0%, 50% 50%, 75% 100%, 0 100%, 0% 100%, 0 0);
+}
+.index-module_type__E-SaG::after {
+    display: none;
+}
+
+//
+.title {
+    color: rgb(5, 74, 238);
+    font-size: 8vw;
+    padding-left: 8vw;
+
+    & > span {
+        display: block;
+        overflow: hidden;
+        & > span {
+            display: block;
+        }
+    }
+}

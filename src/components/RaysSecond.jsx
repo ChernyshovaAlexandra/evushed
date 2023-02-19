@@ -23,13 +23,11 @@ const RaysSecond = () => {
                     <path d="M-100 235V-100H1540V143.287L-100 235Z" fill="#051647" />
                     <path d="M-102 235V237.115L-99.8883 236.997L1540.11 145.284L1542 145.178V143.287V-100V-102H1540H-100H-102V-100V235Z" stroke="#0C32A5" strokeWidth="4" />
                 </g>
-                <g filter="url(#filter5_ddif_854_5361)">
-                    <path d="M1606 334L983 1077H1606V334Z" fill="#051647" />
-                    <path d="M1608 334V328.502L1604.47 332.715L981.467 1075.71L978.713 1079H983H1606H1608V1077V334Z" stroke="#0C32A5" strokeWidth="4" />
-                </g>
-                <g opacity="0.5" filter="url(#filter6_f_854_5361)">
-                    <path d="M1606 420.906C1477.76 448.834 1365.54 593.271 1338.95 780.265C1323.13 891.552 1340.64 996.818 1381.73 1077H1606V420.906Z" fill="#B32EF2" />
-                </g>
+
+
+             
+
+               
             </g>
             <defs>
                 <filter id="filter0_ddif_854_5361" x="-157" y="-157" width="899.769" height="1331" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
