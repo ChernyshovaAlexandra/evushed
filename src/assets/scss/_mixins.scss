@@ -20,7 +20,7 @@
     font-family: "Bebas Neue", cursive;
     font-style: normal;
     font-weight: 700;
-    text-shadow: -2px 2px 43px #3e6bf4;
+    filter: drop-shadow(-2px 2px 43px #3e6bf4);
     line-height: 1;
 }
 @mixin gilroy {

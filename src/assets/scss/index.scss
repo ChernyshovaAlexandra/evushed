@@ -4,7 +4,7 @@
     box-sizing: border-box;
     outline: none;
 }
-@import "./animations";
+
 @import "./colors";
 @import "./mixins";
 
@@ -95,6 +95,9 @@ hr.bg-blue {
     border-color: $blue;
 }
 .bg {
+    &-neonBlue{
+        background: $neonBlue;
+    }
     &-pink {
         background: $deepPink;
     }
@@ -144,3 +147,4 @@ hr.bg-blue {
 }
 @import "./patient_card";
 @import "./faq";
+@import "./animations";

@@ -42,9 +42,9 @@ const Block4 = () => {
 
                 <div className="absolute  bottom-0 z-20 min-[1000px]:right-96 min-[1000px]:w-1/6 min-[1600px]:right-1/3">
                     <div className="relative w-full h-full" ref={ref}>
-                        <ParallaxLayer offset={.4} horizontal={true} speed={.15} factor={.7}>
+                        {/* <ParallaxLayer offset={.4} horizontal={true} speed={.15} factor={.7}>
                             <img className="bottom-0 right-4 absolute" src={doc} alt="" />
-                        </ParallaxLayer>
+                        </ParallaxLayer> */}
                     </div>
                 </div>
             {/* </ParallaxLayer> */}

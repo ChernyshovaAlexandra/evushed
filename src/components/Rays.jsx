@@ -6,7 +6,6 @@ import { bgPath2Props, bgPathProps, bgProps, mainRect, st, st2, st3, st4, st5, s
 
 
 const Rays = ({ animate }) => {
-    console.log(animate)
     return (
         <svg className="rays" viewBox="0 0 1440 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#rect_main)">

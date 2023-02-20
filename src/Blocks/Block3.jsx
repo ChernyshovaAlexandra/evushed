@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import BgWithPolygon from "../components/BgWithPolygon";
 import Icon from "../components/Icon";
-import vac from '../assets/images/vacine.png'
+
 import { useScroll } from "framer-motion";
 import { ParallaxLayer } from "@react-spring/parallax";
 
@@ -10,7 +10,8 @@ const Block3 = () => {
     const ref = useRef()
 
     return (
-        <div className="bg-gray-200 grid items-center relative ">
+        <div className="bg-gray-200 grid items-center ">
+            
             <div className="w-full h-full">
                 <BgWithPolygon />
             </div>
@@ -20,12 +21,7 @@ const Block3 = () => {
                         <span> Люди со сниженным<br /> иммунитетом <span className="text-pink">могут нуждаться<br /> в дополнительной защите </span>от COVID-19<sup className="text-pink-l">3-5</sup></span></h2>
                 </div>
                 <div className="w-5/12 relative" ref={ref}>
-                    <ParallaxLayer offset={-.6} speed={-.2} factor={.4}>
-                        <img className="w-80 absolute right-4 -top-48" src={vac} alt="" />
-                    </ParallaxLayer>
-                    <ParallaxLayer offset={-.55} speed={-.21} factor={.42}>
-                        <img className="w-80 absolute rotate-45	-top-8 left-8" src={vac} alt="" />
-                    </ParallaxLayer>
+                   
                 </div>
             </div>
             <div className="absolute container bottom-12 left-12">

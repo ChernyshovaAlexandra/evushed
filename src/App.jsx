@@ -1,5 +1,5 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './assets/scss/index.scss'
 import Block3 from "./Blocks/Block3";
 import Block4 from "./Blocks/Block4";
@@ -27,28 +27,35 @@ const App = () => {
     checkCookies(true)
   }
   const containerRef = useRef(null)
+  const [y, setY] = useState(0);
+  const [percent, setPercent] = useState(0);
 
+  const scroll = () => {
+    setY(window.scrollY);
+
+  }
+  useEffect(() => {
+    const h = window.innerHeight;
+    window.addEventListener('scroll', scroll);
+    setPercent(h / 100 * 5)
+  }, []);
   return (
-    <div className="content blue-bg-grad" style={{ width: '100%', height: '100%' }} ref={containerRef}>
-      {/* <Nav /> */}
-      {/* <Parallax ref={parallax}> */}
-      {/* <Main /> */}
-      {/* <ImageBlock /> */}
-      {/* <Block3 /> */}
-      {/* <Block4 /> */}
-      {/* <Block5 /> */}
-      {/* <Block6 /> */}
-      {/* {/* <Block7 /> */}
-      {/* <Block8 /> */}
-      {/* <Block9 /> */}
-      {/* <QA /> */}
-      {/* <Block11 /> */}
-      {/* <Block12 /> */}
-      {/* <Block13 /> */}
-      {/* </Parallax> */}
+    <div className="content blue-bg-grad relative" style={{ width: '100%' }} ref={containerRef}>
+      <Nav />
+      <Main y={y} />
+      <ImageBlock y={y} />
 
-
-      {/* {
+      {/* <Block4 />
+      <Block5 />
+      <Block6 />
+      <Block7 />
+      <Block8 />
+      <Block9 />
+      <QA />
+      <Block11 />
+      <Block12 />
+      <Block13 /> */}
+      {
         cookies ? null :
           <div className="bg-pink text-white fixed bottom-0 left-0 w-full px-12 py-8">
             <div className="flex gap-4 items-center mx-auto w-11/12">
@@ -59,8 +66,8 @@ const App = () => {
               <button className="btn btn-transparent text-pink shrink-0" onClick={setCookies}>Согласен</button>
             </div>
           </div>
-      } */}
-      <ScrolledBlocks containerRef={containerRef} />
+      }
+      {/* <ScrolledBlocks containerRef={containerRef} /> */}
     </div >
 
   );
