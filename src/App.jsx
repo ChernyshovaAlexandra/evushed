@@ -15,11 +15,10 @@ import Block13 from "./Blocks/Block13";
 import ImageBlock from "./Blocks/ImageBlock";
 import Main from "./Blocks/Main";
 import Nav from "./components/Nav";
-import ScrolledBlocks from "./Blocks/ScrolledBloks";
+import { useScroll } from '@react-spring/web'
 
 
 const App = () => {
-  const parallax = useRef()
   let cook = localStorage.getItem('astra-zeneka-cookie')
   const [cookies, checkCookies] = useState(cook);
   const setCookies = () => {
@@ -27,23 +26,13 @@ const App = () => {
     checkCookies(true)
   }
   const containerRef = useRef(null)
-  const [y, setY] = useState(0);
-  const [percent, setPercent] = useState(0);
+  const { scrollYProgress } = useScroll()
 
-  const scroll = () => {
-    setY(window.scrollY);
-
-  }
-  useEffect(() => {
-    const h = window.innerHeight;
-    window.addEventListener('scroll', scroll);
-    setPercent(h / 100 * 5)
-  }, []);
   return (
     <div className="content blue-bg-grad relative" style={{ width: '100%' }} ref={containerRef}>
       <Nav />
-      <Main y={y} />
-      <ImageBlock y={y} />
+      <Main scrollYProgress={scrollYProgress} />
+      <ImageBlock scrollYProgress={scrollYProgress} />
 
       {/* <Block4 />
       <Block5 />
