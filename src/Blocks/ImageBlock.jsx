@@ -21,7 +21,7 @@ const ImageBlock = ({ scrollYProgress }) => {
                     style={{
                         height: '100vh',
                         transform: scrollYProgress.to(scrollP =>
-                            (`translateX(${(scrollP * 15)}%)`)
+                            (`translateX(${(scrollP * 35)}%)`)
                         ),
                         clipPath: scrollYProgress.to(scrollP => (
                             `polygon(${scrollP * 70 > 37 ? 37 : scrollP * 70}% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, ${scrollP * 35 > 15 ? scrollP * 25 : 15}% ${scrollP * 80 > 50 ? 50 : scrollP * 80}%)`

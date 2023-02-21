@@ -52,8 +52,7 @@
     -webkit-background-clip: padding-box, text;
     background-clip: padding-box, text;
     background-repeat: no-repeat;
-    opacity: 1;
-    
+    animation: b 0.7s infinite steps(1), t calc(220 * 0.015s) steps(220) forwards;
     small {
         vertical-align: top;
         font-size: 60%;
@@ -64,7 +63,6 @@
 
 @keyframes t {
     from {
-        opacity: 0;
         background-size: 0 200%;
     }
 }

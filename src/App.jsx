@@ -1,21 +1,8 @@
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import React, { useEffect, useRef, useState } from "react";
 import './assets/scss/index.scss'
-import Block3 from "./Blocks/Block3";
-import Block4 from "./Blocks/Block4";
-import Block5 from "./Blocks/Block5";
-import Block6 from "./Blocks/Block6";
-import Block7 from "./Blocks/Block7";
-import Block8 from "./Blocks/Block8";
-import Block9 from "./Blocks/Block9";
-import QA from "./Blocks/QA";
-import Block11 from "./Blocks/Block11";
-import Block12 from "./Blocks/Block12";
-import Block13 from "./Blocks/Block13";
-import ImageBlock from "./Blocks/ImageBlock";
 import Main from "./Blocks/Main";
 import Nav from "./components/Nav";
-import { useScroll } from '@react-spring/web'
+import { useScroll, useSpring } from '@react-spring/web'
 
 
 const App = () => {
@@ -25,14 +12,63 @@ const App = () => {
     localStorage.setItem('astra-zeneka-cookie', 'true')
     checkCookies(true)
   }
-  const containerRef = useRef(null)
-  const { scrollYProgress } = useScroll()
+  const containerRef = useRef(null);
+  const [translateImg, setTr] = useSpring(() => ({
+    transform: 'translateX(0%)',
+    display: 'block',
+  }));
+  const [block, blockApi] = useSpring(() => ({
+    transform: 'translateX(-35%)',
+    opacity: 0
+  }));
+  const [opacity, opacityApi] = useSpring(() => ({
+    opacity: 0,
+
+    clipPath: 'polygon(0% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 0% 100%)',
+    transform: 'translateX(0%)'
+
+  }))
+  const [mainBgAnim, mainBgApi] = useSpring(() => ({
+    transform: 'scale(1)',
+    opacity: 1
+  }))
+  const { scrollYProgress } = useScroll({
+    constiner: containerRef,
+    onChange: ({ value: { scrollYProgress } }) => {
+      if (scrollYProgress > 0) {
+        mainBgApi.start({ transform: 'scale(2)' });
+      }
+      if (scrollYProgress > .2) {
+        mainBgApi.start({ opacity: 0 });
+        opacityApi.start({ opacity: 1 });
+      }
+      if (scrollYProgress > .25) {
+        opacityApi.start({ clipPath: 'polygon(40% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 15% 50%)' })
+      }
+      if (scrollYProgress > .35) {
+        opacityApi.start({ transform: 'translateX(35%)' });
+        blockApi.start({ transform: 'translate(0)' })
+      }
+      if (scrollYProgress > .5) {
+        opacityApi.start({ transform: 'translateX(100%)' });
+        
+      }
+      if (scrollYProgress > .55) {
+        setTr.start({ display: 'none' });
+        blockApi.start({ opacity: 1 });
+      }
+    },
+    default: {
+      immediate: true,
+    },
+  });
+
 
   return (
-    <div className="content blue-bg-grad relative" style={{ width: '100%' }} ref={containerRef}>
+    <div className="content blue-bg-grad relative" style={{ width: '100%', height: '800vh' }} ref={containerRef}>
       <Nav />
-      <Main scrollYProgress={scrollYProgress} />
-      <ImageBlock scrollYProgress={scrollYProgress} />
+      <Main block={block} opacity={opacity} mainBgAnim={mainBgAnim} scrollYProgress={scrollYProgress} translateImg={translateImg} />
+      {/* <ImageBlock scrollYProgress={scrollYProgress} /> */}
 
       {/* <Block4 />
       <Block5 />
