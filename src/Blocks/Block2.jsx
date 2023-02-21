@@ -16,25 +16,8 @@ const Block2 = ({ y, blockTop }) => {
             transition: { delay: .2 }
         })
     }
-    const pinkSpan = {
-        pink: y => ({
-            color: y >= (blockTop * 1.3) ? '#F11952' : "",
-            transition: { delay: 3.2 }
-        }),
-        white: y => ({
-            color: y >= (blockTop * 1.3) ? '#F11952' : "",
-            transition: { delay: 3.2 }
-        })
-    }
-    const pinkSpanContainer = {
-        hidden: y => ({
-            animation: y >= (blockTop * 1.3) ? 'b 0.7s infinite steps(1), t calc(220 * 0.015s) steps(220) both' : '',
-            // opacity
-        }),
-        visible: y => ({
-            animation: y >= (blockTop * 1.3) ? 'b 0.7s infinite steps(1), t calc(220 * 0.015s) steps(220) both' : ''
-        })
-    }
+    
+  
     return (
         <section className="bg-lavender grid items-center relative" >
             <div className="w-full" style={{ height: '100vh' }}>

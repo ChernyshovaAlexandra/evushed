@@ -5,7 +5,7 @@ import Accordeon from "../components/Accordeon";
 
 const QA = () => {
     return (
-        <section className="bg-lavender py-12">
+        <section className="bg-lavender py-12" >
             <div className="container mx-auto">
                 <div className="flex gap-4 justify-between">
                     <div>

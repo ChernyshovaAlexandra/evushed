@@ -18,8 +18,6 @@ const Block8 = () => {
                 <Swiper
                     spaceBetween={25}
                     slidesPerView={2.5}
-                    // onSlideChange={() => console.log()}
-                    // onSwiper={(swiper) => console.log()}
                 >
                     {patients.map(
                         (pat, id) => (

@@ -9,6 +9,7 @@
 @import "./mixins";
 
 h1,
+.h1,
 .header {
     @include header;
     text-transform: uppercase;
@@ -29,48 +30,13 @@ h1,
     }
 }
 
-.doc-after {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background: url(../images/doctor-after.png) no-repeat;
-        background-position: 0 0%;
-        display: block;
-        width: 39rem;
-        height: 53rem;
-        z-index: 120;
-        @media screen and (min-width: 1000px) {
-            width: 25rem;
-            height: 52rem;
-        }
-        @media screen and (min-width: 1600px) {
-            width: 36rem;
-        }
-    }
-    &-light {
-        &::after {
-            background: url(../images/doctor-after-light.png) no-repeat;
-            background-position: 0 0;
-            width: 31rem;
-            @media screen and (min-width: 1000px) {
-                width: 18rem;
-                height: 56rem;
-            }
-            @media screen and (min-width: 1600px) {
-                width: 34.5rem;
-            }
-        }
-    }
-}
 h2,
 .h2 {
     @include headerSecondary;
     display: inline;
 }
-p {
+p,
+span:not(.h1) {
     @include gilroy;
 }
 .btn {
@@ -95,7 +61,7 @@ hr.bg-blue {
     border-color: $blue;
 }
 .bg {
-    &-neonBlue{
+    &-neonBlue {
         background: $neonBlue;
     }
     &-pink {
