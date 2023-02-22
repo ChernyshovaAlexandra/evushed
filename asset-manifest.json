@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/evushed/static/css/main.5482b833.css",
-    "main.js": "/evushed/static/js/main.cdaedd79.js",
+    "main.css": "/evushed/static/css/main.2054ca28.css",
+    "main.js": "/evushed/static/js/main.64ec5f9e.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
+    "static/media/Rays.png": "/evushed/static/media/Rays.ea417a53f478bc8d7a79.png",
     "static/media/doctor-1.png": "/evushed/static/media/doctor-1.e81e80cb268ad752c9e8.png",
     "static/media/doctor-2.png": "/evushed/static/media/doctor-2.96723c65667bfe95bdad.png",
     "static/media/doctor-after.png": "/evushed/static/media/doctor-after.2f3c38b757add9ffcebd.png",
@@ -11,10 +12,10 @@
     "static/media/secBG.jpeg": "/evushed/static/media/secBG.23d407ce9514cc019860.jpeg",
     "static/media/video-bg.jpeg": "/evushed/static/media/video-bg.6f2810e5fe74438047d4.jpeg",
     "static/media/raysbg.jpeg": "/evushed/static/media/raysbg.3f3c0132f373c623cd52.jpeg",
+    "static/media/BEBASNEUE_BOLD.otf": "/evushed/static/media/BEBASNEUE_BOLD.a20da9a8676904a41a73.otf",
     "static/media/Gilroy-Regular.ttf": "/evushed/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/Gilroy-Semibold.ttf": "/evushed/static/media/Gilroy-Semibold.41fa36c3c8e966b35423.ttf",
     "static/media/banner.png": "/evushed/static/media/banner.b511f5f0ce0dab7d18db.png",
-    "static/media/BebasNeueCyrillicRegular.ttf": "/evushed/static/media/BebasNeueCyrillicRegular.f39fe92d35bac3b2fe60.ttf",
     "static/media/vacine.png": "/evushed/static/media/vacine.f6dd64ccdbd612a996a3.png",
     "static/media/Gilroy-Semibold.woff": "/evushed/static/media/Gilroy-Semibold.5b042906a8b58ec4633e.woff",
     "static/media/Gilroy-Regular.woff": "/evushed/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
@@ -30,12 +31,12 @@
     "static/media/bg_with_polygon.jpeg": "/evushed/static/media/bg_with_polygon.8b4e80197ac3bf71ee58.jpeg",
     "index.html": "/evushed/index.html",
     "static/media/check.svg": "/evushed/static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.5482b833.css.map": "/evushed/static/css/main.5482b833.css.map",
-    "main.cdaedd79.js.map": "/evushed/static/js/main.cdaedd79.js.map",
+    "main.2054ca28.css.map": "/evushed/static/css/main.2054ca28.css.map",
+    "main.64ec5f9e.js.map": "/evushed/static/js/main.64ec5f9e.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5482b833.css",
-    "static/js/main.cdaedd79.js"
+    "static/css/main.2054ca28.css",
+    "static/js/main.64ec5f9e.js"
   ]
 }
