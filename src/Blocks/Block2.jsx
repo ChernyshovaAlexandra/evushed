@@ -3,26 +3,24 @@ import Icon from "../components/Icon";
 import bg from '../assets/images/bg_with_polygon.jpeg'
 import { animated } from '@react-spring/web'
 import vac from '../assets/images/vacine.png';
-import { useParallaxController, Parallax, ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 
 
 
 
-const Block2 = ({ scrollYProgress, block }) => {
+const Block2 = ({ scrollYProgress, block, pink }) => {
     const vacineRef = useRef(null);
-
-
-    console.log(Parallax)
     return (
         <section className="bg-lavender grid items-center w-full">
             <ParallaxProvider>
-                <div className="w-full" style={{ height: '100vh' }}>
-                    <img src={bg} alt="" className="w-full h-full object-cover" />
+                <div className="w-full" style={{ height: '100vh', background: '#0e32a5' }}>
+                    <animated.img src={bg} alt="" className="w-full h-full object-cover"
+                        style={{ transform: scrollYProgress.to(s => (`translateX(-${20 - s * 150}%)`)) }} />
                 </div>
                 <animated.div
                     style={{
-                        display: scrollYProgress.to(s => (s > .35 ? 'block' : 'none'))
+                        display: scrollYProgress.to(s => (s > .04 && s < .1 ? 'block' : 'none'))
                     }}
                     className="absolute w-42p container text-2xl top-0 bottom-0 my-auto h-fit text-white h2 words" >
                     <span className="type py-4 relative left-12">
@@ -30,7 +28,7 @@ const Block2 = ({ scrollYProgress, block }) => {
                         профилактики коронавирусной инфекции,
                         однако не всегда она обеспечивает
                         необходимую защиту<small>2</small>. Люди со сниженным
-                        иммунитетом <span >могут нуждаться в дополнительной защите</span> от COVID-19<small>3-5</small>
+                        иммунитетом <animated.span style={pink} >могут нуждаться в дополнительной защите</animated.span> от COVID-19<animated.small style={pink}>3-5</animated.small>
                     </span>
                 </animated.div>
                 <div className="flex gap-4 items-center bottom-12 left-12 absolute">
@@ -40,15 +38,12 @@ const Block2 = ({ scrollYProgress, block }) => {
                 <animated.div
                     className=" right-0 top-0 bottom-0 my-auto"
                     style={{ width: '40%', opacity: block.opacity }} ref={vacineRef} >
-
-                    <Parallax speed={10} className="top-56 absolute right-4">
+                    <Parallax speed={10} className="top-56 absolute right-4" translateY={[-50, 60]}>
                         <img className="w-80" src={vac} alt="" />
                     </Parallax>
-                    <Parallax speed={8} className="top-96 absolute right-12">
+                    <Parallax speed={8} className="top-96 absolute right-12" translateY={[-50, 60]}>
                         <img className="w-80 rotate-45 right-32 relative" src={vac} alt="" />
                     </Parallax>
-
-
                 </animated.div>
             </ParallaxProvider>
         </section>
