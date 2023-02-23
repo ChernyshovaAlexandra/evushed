@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/evushed/static/css/main.eb685def.css",
-    "main.js": "/evushed/static/js/main.e1d886a9.js",
+    "main.js": "/evushed/static/js/main.714129c6.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
     "static/media/Rays.png": "/evushed/static/media/Rays.bf0f909397841926d5ac.png",
     "static/media/doctor-after.png": "/evushed/static/media/doctor-after.2f3c38b757add9ffcebd.png",
@@ -32,11 +32,11 @@
     "index.html": "/evushed/index.html",
     "static/media/check.svg": "/evushed/static/media/check.5a5fbb2228976561b6a0.svg",
     "main.eb685def.css.map": "/evushed/static/css/main.eb685def.css.map",
-    "main.e1d886a9.js.map": "/evushed/static/js/main.e1d886a9.js.map",
+    "main.714129c6.js.map": "/evushed/static/js/main.714129c6.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb685def.css",
-    "static/js/main.e1d886a9.js"
+    "static/js/main.714129c6.js"
   ]
 }
