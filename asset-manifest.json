@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/evushed/static/css/main.5452d6cd.css",
-    "main.js": "/evushed/static/js/main.ebe8a1c2.js",
+    "main.css": "/evushed/static/css/main.eb685def.css",
+    "main.js": "/evushed/static/js/main.e1d886a9.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
-    "static/media/Rays.png": "/evushed/static/media/Rays.ea417a53f478bc8d7a79.png",
-    "static/media/doctor-1.png": "/evushed/static/media/doctor-1.e81e80cb268ad752c9e8.png",
-    "static/media/doctor-2.png": "/evushed/static/media/doctor-2.96723c65667bfe95bdad.png",
+    "static/media/Rays.png": "/evushed/static/media/Rays.bf0f909397841926d5ac.png",
     "static/media/doctor-after.png": "/evushed/static/media/doctor-after.2f3c38b757add9ffcebd.png",
     "static/media/doctor-after-light.png": "/evushed/static/media/doctor-after-light.b8a2e64b3269eb985f03.png",
     "static/media/tela.png": "/evushed/static/media/tela.9ca567cfddab13c3fada.png",
+    "static/media/doctor-2.png": "/evushed/static/media/doctor-2.a1cdef106a6cc581629d.png",
+    "static/media/doctor-1.png": "/evushed/static/media/doctor-1.1fdc91770456b776cb49.png",
     "static/media/secBG.jpeg": "/evushed/static/media/secBG.23d407ce9514cc019860.jpeg",
     "static/media/video-bg.jpeg": "/evushed/static/media/video-bg.6f2810e5fe74438047d4.jpeg",
     "static/media/raysbg.jpeg": "/evushed/static/media/raysbg.3f3c0132f373c623cd52.jpeg",
@@ -31,12 +31,12 @@
     "static/media/bg_with_polygon.jpeg": "/evushed/static/media/bg_with_polygon.8b4e80197ac3bf71ee58.jpeg",
     "index.html": "/evushed/index.html",
     "static/media/check.svg": "/evushed/static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.5452d6cd.css.map": "/evushed/static/css/main.5452d6cd.css.map",
-    "main.ebe8a1c2.js.map": "/evushed/static/js/main.ebe8a1c2.js.map",
+    "main.eb685def.css.map": "/evushed/static/css/main.eb685def.css.map",
+    "main.e1d886a9.js.map": "/evushed/static/js/main.e1d886a9.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5452d6cd.css",
-    "static/js/main.ebe8a1c2.js"
+    "static/css/main.eb685def.css",
+    "static/js/main.e1d886a9.js"
   ]
 }
