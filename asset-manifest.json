@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/evushed/static/css/main.912c8fc7.css",
-    "main.js": "/evushed/static/js/main.037eef68.js",
+    "main.css": "/evushed/static/css/main.16db4b40.css",
+    "main.js": "/evushed/static/js/main.2b6b9012.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
     "static/media/Rays.png": "/evushed/static/media/Rays.ea417a53f478bc8d7a79.png",
     "static/media/tela.png": "/evushed/static/media/tela.6f4554eed63570574219.png",
@@ -31,12 +31,12 @@
     "static/media/bg_with_polygon.jpeg": "/evushed/static/media/bg_with_polygon.8b4e80197ac3bf71ee58.jpeg",
     "index.html": "/evushed/index.html",
     "static/media/check.svg": "/evushed/static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.912c8fc7.css.map": "/evushed/static/css/main.912c8fc7.css.map",
-    "main.037eef68.js.map": "/evushed/static/js/main.037eef68.js.map",
+    "main.16db4b40.css.map": "/evushed/static/css/main.16db4b40.css.map",
+    "main.2b6b9012.js.map": "/evushed/static/js/main.2b6b9012.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.912c8fc7.css",
-    "static/js/main.037eef68.js"
+    "static/css/main.16db4b40.css",
+    "static/js/main.2b6b9012.js"
   ]
 }
