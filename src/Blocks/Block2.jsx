@@ -4,49 +4,65 @@ import bg from '../assets/images/bg_with_polygon.jpeg'
 import { animated } from '@react-spring/web'
 import vac from '../assets/images/vacine.png';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+import { coordinates } from "../assets/constants/coordinates";
 
 
 
 
 
-const Block2 = ({ scrollYProgress, block, pink }) => {
+const Block2 = ({ scrollYProgress, blue_bg_block, pink }) => {
     const vacineRef = useRef(null);
+
     return (
-        <section className="bg-lavender grid items-center w-full">
+        <animated.section className="bg-lavender grid items-center w-full"
+        >
             <ParallaxProvider>
-                <div className="w-full" style={{ height: '100vh', background: '#0e32a5' }}>
-                    <animated.img src={bg} alt="" className="w-full h-full object-cover"
-                        style={{ transform: scrollYProgress.to(s => (`translateX(-${20 - s * 150}%)`)) }} />
+                <div className="w-full" style={{ height: '100vh', background: 'linear-gradient(180deg, #0F072C 0%, #092477 100%)' }}>
+
+                    <div className="triangle-1"></div>
+                    <animated.div className="triangle-2" style={{
+                        right: scrollYProgress.to(s => (`${100 - s * 700}%`)),
+
+                    }}></animated.div>
+                    <div className="round-1"
+                    ></div>
                 </div>
                 <animated.div
                     style={{
-                        display: scrollYProgress.to(s => (s > .04 && s < .1 ? 'block' : 'none'))
+                        display: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] && s < coordinates.block4.coordinates[1] ? 'block' : 'none'))
                     }}
                     className="absolute w-42p container text-2xl top-0 bottom-0 my-auto h-fit text-white h2 words" >
-                    <span className="type py-4 relative left-12">
+                    <animated.span className="type py-4 relative left-12 type-style"
+                        style={{
+                            backgroundPosition: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] ? `${s * 2500}vh 0` : '0 0')),
+                            transition: 'all .35s linear'
+                        }}
+                    >
                         Вакцинация является важной опцией
                         профилактики коронавирусной инфекции,
                         однако не всегда она обеспечивает
-                        необходимую защиту<small>2</small>. Люди со сниженным
-                        иммунитетом <animated.span style={pink} >могут нуждаться в дополнительной защите</animated.span> от COVID-19<animated.small style={pink}>3-5</animated.small>
-                    </span>
+                        необходимую защиту<small style={{ display: 'inline' }}>2</small>. Люди со сниженным
+                        иммунитетом могут нуждаться в дополнительной защите от COVID-19<small style={pink}>3-5</small>
+                    </animated.span>
                 </animated.div>
-                <div className="flex gap-4 items-center bottom-12 left-12 absolute">
+                <animated.a href="#spectr"
+                    style={{ display: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] && s < coordinates.block4.coordinates[1] ? 'flex' : 'none')) }}
+                    className="flex gap-4 items-center bottom-28 left-12 absolute">
                     <Icon id={0} img={`<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.81127 11.5946L15.9464 29L31.0815 11.5946" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 15L15.0583 26.3631C15.3743 27.248 16.6257 27.248 16.9417 26.3631L21 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M15.9463 29L15.9463 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>`} />
                     <p className="text-white font-bold text-lg">Смотри спектр защиты от COVID-19</p>
-                </div>
+                </animated.a>
                 <animated.div
-                    className=" right-0 top-0 bottom-0 my-auto"
-                    style={{ width: '40%', opacity: block.opacity }} ref={vacineRef} >
-                    <Parallax speed={10} className="top-56 absolute right-4" translateY={[-50, 60]}>
+                    className="right-0 top-0 bottom-0 my-auto"
+                    style={{ width: '40%', opacity: blue_bg_block.opacity }} ref={vacineRef} >
+                    <Parallax speed={130} className=" absolute right-4" style={{ top: '55vh' }}>
                         <img className="w-80" src={vac} alt="" />
                     </Parallax>
-                    <Parallax speed={8} className="top-96 absolute right-12" translateY={[-50, 60]}>
+                    <Parallax speed={90} className=" absolute right-12" style={{ top: '62vh' }}>
                         <img className="w-80 rotate-45 right-32 relative" src={vac} alt="" />
                     </Parallax>
                 </animated.div>
             </ParallaxProvider>
-        </section>
+        </animated.section>
     )
 }
 

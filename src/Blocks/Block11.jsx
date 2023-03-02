@@ -3,14 +3,14 @@ import banner from '../assets/images/banner.png'
 
 const Block11 = () => {
     return (
-        <section className="py-12 bg-white">
+        <section className="p-12 bg-white relative z-40">
             <div className="container mx-auto relative ">
                 <div className="w-full h-full rounded-xl mt-8 mx-auto bg-blue-grad overflow-hidden" src="">
                     <img className="w-full h-full m-0" src={banner} alt="" />
                 </div>
                 <div className="absolute left-12 text-white w-6/12 bottom-0 top-0 my-auto h-fit">
-                    <h2 className="text-2xl">Консультация специалиста</h2>
-                    <p className="mt-4">Вы можете получить консультацию у специалистов в медицинских организациях вашего города</p>
+                    <h2 className="header-sec text-white" style={{ marginBottom: '.75rem' }}>Консультация специалиста</h2>
+                    <p className="txt-reg">Вы можете получить консультацию у специалистов в медицинских организациях вашего города</p>
                     <div className="rounded-lg lavender-grad p-4 mt-8">
                         <div className="flex gap-4 items-center">
                             <svg className="w-16 h-16 shrink-0" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +18,7 @@ const Block11 = () => {
                                 <path d="M23.3794 30.6739L27.5386 34.8331L38.6469 23.7248" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
 
-                            <div className="">
+                            <div className="text-base" style={{lineHeight: '1.375rem'}}>
                                 <p>Лучше всего о дополнительной защите от коронавируса и её необходимости может рассказать ваш лечащий врач.</p>
                                 <p className="mt-2">Рекомендуем в первую очередь получить консультацию у него</p>
                             </div>

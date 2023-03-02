@@ -38,7 +38,7 @@
 //
 .title {
     & > span {
-        display: block;
+        // display: block;
         overflow: hidden;
         & > span {
             display: block;
@@ -46,14 +46,14 @@
     }
 }
 .type {
-    color: #0000;
-    background: linear-gradient(-90deg, #fff 5px, #0000 0) 10px 0, linear-gradient(#fff 0 0) 0 0;
-    background-size: calc(220 * 1ch) 200%;
-    -webkit-background-clip: padding-box, text;
-    background-clip: padding-box, text;
-    background-repeat: no-repeat;
-    animation: b 0.7s infinite steps(1), t calc(220 * 0.015s) steps(220) forwards;
-    small {
+    color: transparent !important;
+    background: linear-gradient(45deg, rgb(12, 50, 165), #fff);
+    background-size: 400%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    // animation: b .9s linear infinite;
+     //, t calc(220 * 0.015s) steps(220) forwards;
+        small {
         vertical-align: top;
         font-size: 60%;
         line-height: 1.2;
@@ -67,7 +67,7 @@
     }
 }
 @keyframes b {
-    50% {
-        background-position: 0 -100%, 0 0;
+    to {
+        background-position: 3040px 0;
     }
 }

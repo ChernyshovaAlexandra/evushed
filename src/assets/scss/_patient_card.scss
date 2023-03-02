@@ -1,11 +1,46 @@
 .patient-card {
-    
+    padding: 1.625rem;
+    &_data {
+        &_name {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            color: $deepPink;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        &_diagnose {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #030c26;
+        }
+        &_process {
+            font-family: "Gilroy";
+            font-style: normal;
+            &.font-bold {
+                font-weight: 600;
+                display: block;
+                margin-top: 1.5rem;
+                margin-bottom: .5rem;
+            }
+            font-size: 1rem;
+            line-height: 1.625rem;
+            color: #030c26;
+        }
+    }
     &_img {
-        padding-bottom: 65.4%;
+        padding-bottom: 65.36%;
         display: grid;
         place-items: center bottom;
-        img{
-            filter:  drop-shadow(2px 2px 2rem blue);
+        img {
+            filter: drop-shadow(2px 2px 2rem blue);
         }
     }
 }

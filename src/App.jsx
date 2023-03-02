@@ -11,74 +11,79 @@ import Block12 from "./Blocks/Block12";
 import QA from './Blocks/QA'
 import Block13 from "./Blocks/Block13";
 import Popup from "./components/Popup";
+import { coordinates } from "./assets/constants/coordinates";
 
 const App = () => {
-  let cook = localStorage.getItem('astra-zeneka-cookie')
+  let cook = localStorage.getItem('astra-zeneka-cookie');
+  const [popup, close] = useState(false)
   const [cookies, checkCookies] = useState(cook);
   const setCookies = () => {
     localStorage.setItem('astra-zeneka-cookie', 'true')
     checkCookies(true)
   }
   const containerRef = useRef(null);
-  const [translateImg, setTr] = useSpring(() => ({ transform: 'translateX(0%)', display: 'block', opacity: 1 }));
-  const [block, blockApi] = useSpring(() => ({ transform: 'translateX(-35%)', }));
-  const [opacity, opacityApi] = useSpring(() => ({ opacity: 0, clipPath: 'polygon(0% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 0% 100%)', transform: 'translateX(0%)' }))
-  const [pink, pinkApi] = useSpring(() => ({ color: 'rgba(255,255,255,0)' }))
-  const [raysSt, setRays] = useSpring(() => ({ opacity: 0, transform: 'scale(3)', display: 'flex' }))
-  const [raysStL, setRaysL] = useSpring(() => ({ class: 'doc-after', opacity: 0, transform: 'scale(3)', color: 'white', display: 'none' }))
-  const [raysSt2, setRays2] = useSpring(() => ({ opacity: 0, transform: 'scale(3)', color: 'white', display: 'none' }));
-  const [raysBlock, setRaysblock] = useSpring(() => ({ opacity: 0 }))
-  const [mainBgAnim, mainBgApi] = useSpring(() => ({ transform: 'scale(3)', opacity: 1 }))
-  const [popup, close] = useState(false)
+
+
+  const [main_photo_to_right, move_main_photo] = useSpring(() => ({ transform: 'translateX(0%)', display: 'block', opacity: 1 }));
+  const [blue_bg_block, blueBgBlockApi] = useSpring(() => ({ transform: 'translateX(-35%)', }));
+  const [blue_bg_block_image, blueBgBlockImageApi] = useSpring(() => ({ opacity: 0, clipPath: 'polygon(0% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 0% 100%)', transform: 'translateX(0%)' }))
+  const [main_bg_gradient, set_main_bg_gradient] = useSpring(() => ({ opacity: 1 }));
+  const [mainBgRaysAnim, mainBgRaysApi] = useSpring(() => ({ transform: 'scale(3)', opacity: 1 }));
+
+
+  const [raysSpectrOneBlue, set_raysSpectrOneBlue] = useSpring(() => ({ opacity: 0, display: 'flex' }))
+  const [raysSpectrTwoWhite, set_raysSpectrTwoWhite] = useSpring(() => ({ opacity: 0, color: 'white', display: 'none' }))
+  const [raysSpectrTwoBlue, set_raysSpectrTwoBlue] = useSpring(() => ({ display: 'none' }));
+  const [spectrZashityAll, spectrZashityAll_set] = useSpring(() => ({ opacity: 0 }))
+
+
+
 
   const { scrollYProgress } = useScroll({
     constiner: containerRef,
     onChange: ({ value: { scrollYProgress } }) => {
-      console.log(scrollYProgress);
-      
-      mainBgApi.start({
-        opacity: scrollYProgress >= .02 ? 0 : 1,
-        transform: scrollYProgress < .02 ? 'scale(1)' : 'scale(2)'
+      console.log(scrollYProgress)
+      set_main_bg_gradient.start({
+        opacity: scrollYProgress > coordinates.block1.coordinates[0] + .004 ? 0 : 1
+      })
+      mainBgRaysApi.start({
+        opacity: scrollYProgress >= coordinates.block1.coordinates[0] + .005 ? 0 : 1,
+        transform: scrollYProgress < coordinates.block2.coordinates[0] ? 'scale(1.35)' : 'scale(3)'
       });
 
-      opacityApi.start({
-        opacity: scrollYProgress > .02 && scrollYProgress < .1 ? 1 : 0,
-        transform: scrollYProgress > .045 ? 'translateX(100%)' :
-          scrollYProgress > .04 && scrollYProgress < .045 ? 'translateX(35%)' : 'translateX(0%)',
-        clipPath: scrollYProgress > .035 ?
-          'polygon(40% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 15% 50%)' :
+      blueBgBlockImageApi.start({
+        opacity: scrollYProgress >= coordinates.block2.coordinates[0] ? 0 : 1,
+        transform: scrollYProgress > coordinates.block2.coordinates[1] + .005 ? 'translateX(100%)' :
+          scrollYProgress > coordinates.block2.coordinates[1] && scrollYProgress < coordinates.block2.coordinates[1] + .005 ? 'translateX(40%)' : 'translateX(0%)',
+        clipPath: scrollYProgress > coordinates.block2.coordinates[1] ?
+          'polygon(32% 0px, 100% 0px, 100% 50%, 100% 100%, 32% 100%, 13% 50%)' :
           'polygon(0% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 0% 100%)'
       });
 
 
-      setTr.start({
-        opacity: scrollYProgress > .03 ? .5 : 1,
-        display: scrollYProgress > .04 && scrollYProgress < .05 ? 'none' : 'block'
+      move_main_photo.start({
+        display: scrollYProgress > coordinates.block3.coordinates[0] && scrollYProgress < coordinates.block4.coordinates[0] ? 'none' : 'block'
       })
-      blockApi.start({
-        transform: scrollYProgress >= .02 ? 'translate(0)' : 'translateX(-35%)',
-        opacity: scrollYProgress > .045 ? 1 : 0
+      blueBgBlockApi.start({
+        transform: scrollYProgress >= coordinates.block2.coordinates[0] ? 'translate(0)' : 'translateX(-35%)',
+        opacity: scrollYProgress > coordinates.block2.coordinates[1] ? 1 : 0
       })
-      setRaysblock.start({
-        opacity: scrollYProgress > .07 && scrollYProgress < .25 ? 1 : 0
+      spectrZashityAll_set.start({
+        opacity: scrollYProgress > coordinates.block4.coordinates[0] && scrollYProgress < coordinates.block6.coordinates[1] ? 1 : 0
       });
 
-      setRays.start({
-        opacity: scrollYProgress > .07 && scrollYProgress < .14 ? 1 : 0,
-        //  scrollYProgress > .2 && scrollYProgress < .25 
-        transform: scrollYProgress > .7 ? 'scale(1)' : 'scale(3)',
-        display: scrollYProgress > .14 ? 'none' : 'flex'
+      set_raysSpectrOneBlue.start({
+        opacity: scrollYProgress > coordinates.block4.coordinates[0] && scrollYProgress < coordinates.block5.coordinates[0] ? 1 : 0,
+        display: scrollYProgress > coordinates.block4.coordinates[0] && scrollYProgress < coordinates.block5.coordinates[0] ? 'flex' : 'none'
       })
 
-      setRaysL.start({
-        opacity: scrollYProgress > .14 && scrollYProgress < .21 ? 1 : 0,
-        transform: scrollYProgress > .14 ? 'scale(1)' : 'scale(3)',
-        color: scrollYProgress > .14 && scrollYProgress < .21 ? '#092477' : '#fff',
-        display: scrollYProgress > .14 && scrollYProgress < .21 ? 'flex' : 'none'
+      set_raysSpectrTwoWhite.start({
+        opacity: scrollYProgress > coordinates.block5.coordinates[0] && scrollYProgress < coordinates.block6.coordinates[0] ? 1 : 0,
+        color: scrollYProgress > coordinates.block5.coordinates[0] && scrollYProgress < coordinates.block6.coordinates[0] ? '#092477' : '#fff',
+        display: scrollYProgress > coordinates.block5.coordinates[0] && scrollYProgress < coordinates.block6.coordinates[0] ? 'flex' : 'none'
       })
-      setRays2.start({
-        opacity: scrollYProgress > .21 && scrollYProgress < .28 ? 1 : 0,
-        display: scrollYProgress > .21 && scrollYProgress < .28 ? 'flex' : 'none'
+      set_raysSpectrTwoBlue.start({
+        display: scrollYProgress > coordinates.block6.coordinates[0] && scrollYProgress < coordinates.block6.coordinates[1] ? 'flex' : 'none'
       })
 
     },
@@ -95,14 +100,25 @@ const App = () => {
         width: '100vw', overflowX: 'hidden'
       }} >
         <Nav />
-        <div className="overflow-y-scroll bg-lavender relative z-30" ref={containerRef} style={{ height: '260vh' }}>
-          <Main close={close} raysBlock={raysBlock} raysSt2={raysSt2} raysStL={raysStL} raysSt={raysSt} pink={pink} block={block} opacity={opacity} mainBgAnim={mainBgAnim} scrollYProgress={scrollYProgress} translateImg={translateImg}
+        <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" ref={containerRef} style={{ height: '560vh' }}>
+          <Main
+            close={close}
+            spectrZashityAll={spectrZashityAll}
+            raysSpectrTwoBlue={raysSpectrTwoBlue}
+            raysSpectrTwoWhite={raysSpectrTwoWhite}
+            raysSpectrOneBlue={raysSpectrOneBlue}
+            main_bg_gradient={main_bg_gradient}
+            blue_bg_block={blue_bg_block}
+            blue_bg_block_image={blue_bg_block_image}
+            mainBgRaysAnim={mainBgRaysAnim}
+            scrollYProgress={scrollYProgress}
+            main_photo_to_right={main_photo_to_right}
           // 
           />
         </div>
 
         <Block7 />
-        <Block8 />
+        <Block8 scrollYProgress={scrollYProgress} />
         <Block9 />
         <QA />
         <Block11 />

@@ -9,32 +9,32 @@ const Rays = ({ animate }) => {
     return (
         <svg className="rays" viewBox="0 0 1440 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#rect_main)">
-                <motion.rect
-                    variants={bgProps}
-                    custom={animate}
+                <rect
+                
+                    
                     initial="blue"
                     animate='white'
                     className="w-full h-full"
                 />
-                <motion.g custom={animate} variants={st8} initial='blue' animate='white' opacity="0.5">
-                    <motion.path custom={animate} initial='blue' animate='white' d="M601 1077H1.88582H-100V-100H405.726L447.467 150.092L476.533 326.375L513.967 553.426L601 1077Z" variants={bgPathProps} />
-                    <motion.path custom={animate} initial='blue' animate='white' variants={bgPath2Props} d="M601 1078H602.18L601.986 1076.84L514.954 553.264L514.953 553.262L477.52 326.213L448.454 149.93L448.453 149.928L406.712 -100.165L406.573 -101H405.726H-100H-101V-100V1077V1078H-100H1.88582H601Z" strokeWidth="2" />
-                </motion.g>
-                <motion.g custom={animate} variants={st6} initial='blue' animate='white' opacity="0.2" >
-                    <motion.path custom={animate} initial="blue" animate='white' variants={mainRect} d="M601 1077H1.88582H-100V-100H405.726L447.467 150.092L476.533 326.375L513.967 553.426L601 1077Z" />
-                </motion.g>
-                <motion.g custom={animate} variants={st7} initial='blue' animate='white' opacity="0.5" >
+                <g   initial='blue' animate='white' opacity="0.5">
+                    <path  initial='blue' animate='white' d="M601 1077H1.88582H-100V-100H405.726L447.467 150.092L476.533 326.375L513.967 553.426L601 1077Z" />
+                    <path  initial='blue' animate='white' d="M601 1078H602.18L601.986 1076.84L514.954 553.264L514.953 553.262L477.52 326.213L448.454 149.93L448.453 149.928L406.712 -100.165L406.573 -101H405.726H-100H-101V-100V1077V1078H-100H1.88582H601Z" strokeWidth="2" />
+                </g>
+                <g  initial='blue' animate='white' opacity="0.2" >
+                    <path  initial="blue" animate='white' d="M601 1077H1.88582H-100V-100H405.726L447.467 150.092L476.533 326.375L513.967 553.426L601 1077Z" />
+                </g>
+                <g  initial='blue' animate='white' opacity="0.5" >
                     <path d="M352 737.859L-100 584V1100H352V737.859Z" fill="#2EB7F2" />
-                </motion.g>
-                <motion.g custom={animate} variants={st5} initial='blue' animate='white' style={{ "mixBlendMode": "color-dodge" }} >
-                    <motion.path custom={animate} variants={st} initial='blue' animate='white' d="M-100 235V478.5L1540 143.287L-100 235Z" />
-                </motion.g>
+                </g>
+                <g  initial='blue' animate='white' style={{ "mixBlendMode": "color-dodge" }} >
+                    <path  initial='blue' animate='white' d="M-100 235V478.5L1540 143.287L-100 235Z" />
+                </g>
 
 
-                <motion.g custom={animate} variants={st2} initial='blue' animate='white' opacity="0.5">
-                    <motion.path custom={animate} variants={st3} initial='blue' animate='white' d="M-100 235V-100H1540V143.287L-100 235Z" />
-                    <motion.path custom={animate} values={st4} initial='blue' animate='white' d="M-100 -101H-101V-100V235V236.057L-99.9442 235.998L1540.06 144.285L1541 144.233V143.287V-100V-101H1540H-100Z" />
-                </motion.g>
+                <g  initial='blue' animate='white' opacity="0.5">
+                    <path  initial='blue' animate='white' d="M-100 235V-100H1540V143.287L-100 235Z" />
+                    <path  values={st4} initial='blue' animate='white' d="M-100 -101H-101V-100V235V236.057L-99.9442 235.998L1540.06 144.285L1541 144.233V143.287V-100V-101H1540H-100Z" />
+                </g>
             </g>
             <defs>
 
