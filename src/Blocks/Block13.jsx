@@ -16,20 +16,20 @@ const Block13 = () => {
                 <div className="mt-8 grid min-[1000px]:grid-cols-4 grid-rows-4 gap-8">
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
                         <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img1} />
-                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img11} />
+                        <img className="w-full h-full object-cover -my-1 object-center hidden max-[1000px]:block" src={img11} />
                     </div>
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
                         <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img2} />
-                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img21} />
+                        <img className="w-full h-full object-cover -my-1 object-center hidden max-[1000px]:block" src={img21} />
 
                     </div>
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
                         <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img3} />
-                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img31} />
+                        <img className="w-full h-full object-cover -my-1 object-center hidden max-[1000px]:block" src={img31} />
                     </div>
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
                         <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img4} />
-                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img41} />
+                        <img className="w-full h-full object-cover -my-1 object-center hidden max-[1000px]:block" src={img41} />
                     </div>
                 </div>
                 <hr className="my-12 bg-blue" />

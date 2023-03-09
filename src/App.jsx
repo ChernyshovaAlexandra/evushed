@@ -15,7 +15,15 @@ import { coordinates } from "./assets/constants/coordinates";
 import Mobile from "./components/Mobile";
 
 const App = () => {
-  const mobile = window.innerWidth <= 600;
+  const [mobile, setMobile] = useState(window.innerWidth <= 1000)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 1000)
+    }
+    window.addEventListener('resize', handleResize)
+  })
+
   let cook = localStorage.getItem('astra-zeneka-cookie');
   const [popup, close] = useState(false)
   const [cookies, checkCookies] = useState(cook);
@@ -41,6 +49,7 @@ const App = () => {
   const { scrollYProgress } = useScroll({
     constiner: containerRef,
     onChange: ({ value: { scrollYProgress } }) => {
+      // console.log(scrollYProgress)
       set_main_bg_gradient.start({
         opacity: scrollYProgress > coordinates.block1.coordinates[0] + .004 ? 0 : 1
       })
@@ -64,7 +73,7 @@ const App = () => {
       })
       blueBgBlockApi.start({
         transform: scrollYProgress >= coordinates.block2.coordinates[0] ? 'translate(0)' : 'translateX(-35%)',
-        opacity: scrollYProgress > coordinates.block2.coordinates[1] ? 1 : 0
+        opacity: scrollYProgress > coordinates.block2.coordinates[0] ? 1 : 0
       })
       spectrZashityAll_set.start({
         opacity: scrollYProgress > coordinates.block4.coordinates[0] && scrollYProgress < coordinates.block6.coordinates[1] ? 1 : 0
@@ -94,12 +103,13 @@ const App = () => {
   return (
     <>
       {mobile ?
-        <Mobile /> :
-        <div className={`relative content blue-bg-grad ${popup ? 'overflow-hidden' : ''}`} style={{
+        <Mobile close={close} /> :
+        <div className={`relative content blue-bg-grad ${popup ? 'overflow-hidden' : ''}`} 
+        style={{
           height: popup ? '100vh' : '',
           width: '100vw', overflowX: 'hidden'
         }} >
-          <Nav />
+          <Nav close={close} />
           <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" ref={containerRef} style={{ height: '560vh' }}>
             <Main
               close={close}
@@ -124,22 +134,22 @@ const App = () => {
           <Block11 />
           <Block12 />
           <Block13 />
-          {popup ? <Popup close={close} /> : null}
-          {
-            cookies ? null :
-              <div className="bg-pink text-white fixed bottom-0 left-0 w-full px-12 py-8 cookies">
-                <div className="flex gap-4 items-center mx-auto w-11/12">
-                  <div className="">
-                    <p className="font-bold">Политика Cookie</p>
-                    <p className="mt-2 font-normal">Этот сайт использует файлы cookies, чтобы облегчить вам пользование нашим веб-сайтом. Продолжая использовать этот веб-сайт, вы даете согласие на использование файлов cookies. Подробнее о том, как мы пользуемся файлами cookies и как ими управлять, вы можете узнать нажав на ссылку.</p>
-                  </div>
-                  <button className="btn btn-transparent text-pink shrink-0" onClick={setCookies}>Согласен</button>
-                </div>
-              </div>
-          }
+
         </div >
       }
-
+      {popup ? <Popup close={close} /> : null}
+      {
+        cookies ? null :
+          <div className="bg-pink text-white fixed bottom-0 left-0 w-full px-12 py-8 cookies">
+            <div className="flex gap-4 items-center mx-auto w-11/12">
+              <div className="">
+                <p className="font-bold">Политика Cookie</p>
+                <p className="mt-2 font-normal">Этот сайт использует файлы cookies, чтобы облегчить вам пользование нашим веб-сайтом. Продолжая использовать этот веб-сайт, вы даете согласие на использование файлов cookies. Подробнее о том, как мы пользуемся файлами cookies и как ими управлять, вы можете узнать нажав на ссылку.</p>
+              </div>
+              <button className="btn btn-transparent text-pink shrink-0" onClick={setCookies}>Согласен</button>
+            </div>
+          </div>
+      }
     </>
   );
 }

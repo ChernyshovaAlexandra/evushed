@@ -8,6 +8,10 @@
 @import "./colors";
 @import "./mixins";
 
+#root{
+    width: 100vw;
+    overflow-x: hidden
+}
 h1,
 .header {
     @include header;
@@ -299,6 +303,16 @@ hr.bg-blue {
     }
     &-darkBlue {
         color: $darkBlue;
+    }
+    &-gray {
+        color: $gray;
+    }
+}
+.setDisplayPopup {
+    display: grid;
+    height: 100vh;
+    @media screen and (min-width: 1000px) {
+        height: 80vh;
     }
 }
 .glow {

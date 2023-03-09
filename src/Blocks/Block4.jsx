@@ -95,7 +95,7 @@ const Block4 = ({ close, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTwoBlu
                     style={{
                         display: raysSpectrTwoWhite.display,
                         transform: scrollYProgress.to(s => (`translateX(-${s * 1500}px)`)),
-                        right: `-${coordinates.block5.coordinates[0] * 1250}px`,
+                        right: `-${coordinates.block5.coordinates[0] * 1550}px`,
                         position: 'relative'
                     }}>
                     <img src={doc2} alt="" style={{ maxHeight: '80vh' }} />

@@ -9,13 +9,13 @@ export const coordinates = {
         coordinates: [.04, .16]
     },
     block4: {
-        coordinates: [.16, .26]
+        coordinates: [.16, .22]
     },
     block5: {
-        coordinates: [.26, .36]
+        coordinates: [.22, .3]
     },
     block6: {
-        coordinates: [.36, .46]
+        coordinates: [.3, .46]
     },
     block7: {
         coordinates: [.55]

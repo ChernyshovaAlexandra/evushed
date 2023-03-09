@@ -81,7 +81,7 @@ const Mobile = ({ close }) => {
                         <span className="text-pink"> могут нуждаться в дополнительной защите</span> от COVID-19<sup className="text-pink">[2-4]</sup>
                     </div>
                     <img className="block mx-auto w-full" src={vac} alt="" />
-                    <div className="flex gap-4 items-center w-8/12 mt-8">
+                    <div className="flex gap-4 items-center w-10/12 mt-8">
                         <Icon id={0}
                             img={`<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.81127 11.5946L15.9464 29L31.0815 11.5946" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 15L15.0583 26.3631C15.3743 27.248 16.6257 27.248 16.9417 26.3631L21 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M15.9463 29L15.9463 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>`} />
                         <p className="text-white font-bold text-lg">Смотри спектр защиты от COVID-19</p>

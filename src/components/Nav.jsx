@@ -1,5 +1,5 @@
 import React from "react";
-const Nav = () => {
+const Nav = ({ close }) => {
     return (
         <nav className="bg-white rounded-full fixed top-6 left-0 right-0 z-30 mx-auto w-11/12 p-4" style={{ zIndex: 998 }}>
             <div className="flex justify-between gap-4 items-center">
@@ -23,7 +23,7 @@ const Nav = () => {
                         <li className="text-black font-bold"><a href="">Группы риска</a></li>
                         <li className="text-black font-bold"><a href="">Частые вопросы</a></li>
                         <li className="ml-3">
-                            <button className="btn btn-transparent text-pink">Пройти опрос**</button>
+                            <button onClick={()=>close(true)} className="btn btn-transparent text-pink">Пройти опрос**</button>
                         </li>
                     </ul>
 
