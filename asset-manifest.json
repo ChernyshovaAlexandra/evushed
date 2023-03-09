@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/evushed/static/css/main.b98a7add.css",
-    "main.js": "/evushed/static/js/main.96d20947.js",
+    "main.css": "/evushed/static/css/main.976f5536.css",
+    "main.js": "/evushed/static/js/main.117a8600.js",
     "static/js/787.05f010fb.chunk.js": "/evushed/static/js/787.05f010fb.chunk.js",
     "static/media/Rays.png": "/evushed/static/media/Rays.ea417a53f478bc8d7a79.png",
     "static/media/mob-img-3.png": "/evushed/static/media/mob-img-3.8382c50dd67caf786724.png",
@@ -33,17 +33,16 @@
     "static/media/mainbg.jpeg": "/evushed/static/media/mainbg.acde7d4a782965b73557.jpeg",
     "static/media/patient1.png": "/evushed/static/media/patient1.a816ab6a08582aefa2f6.png",
     "static/media/raysLbg.jpeg": "/evushed/static/media/raysLbg.ba5e332f25b66f05dee5.jpeg",
-    "static/media/bg_with_polygon.jpeg": "/evushed/static/media/bg_with_polygon.8b4e80197ac3bf71ee58.jpeg",
     "static/media/11.jpg": "/evushed/static/media/11.112539900a98fd05bb9c.jpg",
     "static/media/rays-mob.svg": "/evushed/static/media/rays-mob.368aa130a3ba7ef1e2453183192b0360.svg",
     "index.html": "/evushed/index.html",
     "static/media/check.svg": "/evushed/static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.b98a7add.css.map": "/evushed/static/css/main.b98a7add.css.map",
-    "main.96d20947.js.map": "/evushed/static/js/main.96d20947.js.map",
+    "main.976f5536.css.map": "/evushed/static/css/main.976f5536.css.map",
+    "main.117a8600.js.map": "/evushed/static/js/main.117a8600.js.map",
     "787.05f010fb.chunk.js.map": "/evushed/static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b98a7add.css",
-    "static/js/main.96d20947.js"
+    "static/css/main.976f5536.css",
+    "static/js/main.117a8600.js"
   ]
 }
