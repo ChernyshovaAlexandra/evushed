@@ -51,16 +51,18 @@
     background-size: 400%;
     background-position: 0 0;
     -webkit-background-clip: text;
-    // animation: b .9s linear infinite;
-     //, t calc(220 * 0.015s) steps(220) forwards;
-        small {
+    background-clip: text;
+    // -webkit-box-decoration-break: clone;
+    small {
         vertical-align: top;
         font-size: 60%;
         line-height: 1.2;
         padding-left: 5px;
     }
 }
-
+.cookies{
+    z-index: 99999;
+}
 @keyframes t {
     from {
         background-size: 0 200%;

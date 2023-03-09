@@ -3,25 +3,33 @@ import img1 from '../assets/images/1.jpeg'
 import img2 from '../assets/images/2.jpeg'
 import img3 from '../assets/images/3.jpeg'
 import img4 from '../assets/images/4.jpeg'
+import img11 from '../assets/images/11.jpg'
+import img21 from '../assets/images/21.jpg'
+import img31 from '../assets/images/31.jpg'
+import img41 from '../assets/images/41.jpg'
 
 const Block13 = () => {
     return (
-        <section className="px-20 py-16 bg-darkBlue text-white relative z-40">
+        <section className="min-[1000px]:px-20 px-5 py-16 bg-darkBlue text-white relative z-40">
             <div className="container mx-auto">
                 <p className="text-sm mt-2 txt-footer">Здесь вам могут помочь с информацией относительно вашего заболевания: </p>
-                <div className="mt-8 grid grid-cols-4 gap-8">
+                <div className="mt-8 grid min-[1000px]:grid-cols-4 grid-rows-4 gap-8">
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
-                        <img className="w-full h-full object-cover -my-1 object-center" src={img1} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img1} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img11} />
                     </div>
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
-                        <img className="w-full h-full object-cover -my-1 object-center" src={img2} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img2} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img21} />
 
                     </div>
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
-                        <img className="w-full h-full object-cover -my-1 object-center" src={img3} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img3} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img31} />
                     </div>
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
-                        <img className="w-full h-full object-cover -my-1 object-center" src={img4} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img4} />
+                        <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:block" src={img41} />
                     </div>
                 </div>
                 <hr className="my-12 bg-blue" />

@@ -13,9 +13,18 @@ h1,
     @include header;
     text-transform: uppercase;
     letter-spacing: 0.8px;
+    &.f-small {
+        font-size: 2.75rem !important;
+    }
 }
 .lavender-grad {
     background: #3a47bf;
+}
+.changeColor {
+    color: white;
+    @media screen and (max-width: 1000px) {
+        color: darkblue;
+    }
 }
 .header {
     text-shadow: none;
@@ -25,7 +34,15 @@ h1,
     font-size: 4rem !important;
     line-height: 1;
     &-container {
-        top: 16rem;
+        @media screen and (min-width: 140px) {
+            @media (min-height: 720px) {
+                max-height: 77vh;
+                top: 25vh;
+            }
+            @media (min-height: 930px) {
+                max-height: 65vh;
+            }
+        }
     }
     &-btn {
         margin-top: 2.3rem;
@@ -61,8 +78,12 @@ h1,
         font-family: "Gilroy";
         font-style: normal;
         font-weight: 600;
-        font-size: 2.25rem;
-        line-height: 1.28;
+        @media screen and (min-width: 1000px) {
+            font-size: 2.25rem;
+            line-height: 1.28;
+        }
+        font-size: 1.25rem;
+        line-height: 1.75rem;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         margin-bottom: 3.25rem;
@@ -77,11 +98,24 @@ h1,
         width: 47%;
     }
 }
+.img-container-vid {
+    @media screen and (max-width: 600px) {
+        padding-bottom: 57%;
+        height: 0;
+        img {
+            object-fit: cover;
+            object-position: center right;
+        }
+    }
+}
 .type-style {
     @include gilroy;
     font-weight: 600;
     letter-spacing: 0.05em;
     line-height: 1.58;
+}
+.spacing-05 {
+    letter-spacing: 0.05em;
 }
 .main {
     width: 100%;
@@ -145,6 +179,10 @@ h1,
         font-size: 1.5rem;
         line-height: 2rem;
         letter-spacing: -0.02em;
+        @media screen and (max-width: 640px) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
     }
     &-footer {
         font-family: "Gilroy";
@@ -160,6 +198,10 @@ h1,
         font-size: 1.5rem;
         line-height: 2rem;
         letter-spacing: -0.02em;
+        @media screen and (max-width: 640px) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
     }
     &-after {
         font-family: "PT Sans";
@@ -183,6 +225,13 @@ h2,
 .h2 {
     @include headerSecondary;
     display: inline;
+    &.mob {
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.75rem;
+        line-height: 2.75rem;
+    }
 }
 p {
     @include gilroy;
@@ -256,20 +305,31 @@ hr.bg-blue {
     box-shadow: -2px 2px 43px #3e6bf4;
 }
 .video {
-    background: linear-gradient(180deg, #0f072c 0%, #1f3cb0 100%);
-    border-radius: 1.5rem;
-    box-shadow: 0px 22px 80px rgba(90, 6, 195, 0.07), 0px 9.19107px 33.4221px rgba(90, 6, 195, 0.0503198),
-        0px 4.91399px 17.869px rgba(90, 6, 195, 0.0417275), 0px 2.75474px 10.0172px rgba(90, 6, 195, 0.035),
-        0px 1.46302px 5.32008px rgba(90, 6, 195, 0.0282725), 0px 0.608796px 2.21381px rgba(90, 6, 195, 0.0196802);
+    @media screen and (min-width: 1000px) {
+        background: linear-gradient(180deg, #0f072c 0%, #1f3cb0 100%);
+        box-shadow: 0px 22px 80px rgba(90, 6, 195, 0.07), 0px 9.19107px 33.4221px rgba(90, 6, 195, 0.0503198),
+            0px 4.91399px 17.869px rgba(90, 6, 195, 0.0417275), 0px 2.75474px 10.0172px rgba(90, 6, 195, 0.035),
+            0px 1.46302px 5.32008px rgba(90, 6, 195, 0.0282725), 0px 0.608796px 2.21381px rgba(90, 6, 195, 0.0196802);
+        border-radius: 1.5rem;
+    }
+    &.frst {
+        background: linear-gradient(180deg, #0f072c 0%, #1f3cb0 100%);
+        box-shadow: 0px 22px 80px rgba(90, 6, 195, 0.07), 0px 9.19107px 33.4221px rgba(90, 6, 195, 0.0503198),
+            0px 4.91399px 17.869px rgba(90, 6, 195, 0.0417275), 0px 2.75474px 10.0172px rgba(90, 6, 195, 0.035),
+            0px 1.46302px 5.32008px rgba(90, 6, 195, 0.0282725), 0px 0.608796px 2.21381px rgba(90, 6, 195, 0.0196802);
+        border-radius: 1.5rem;
+    }
 }
 .shrink-0 {
     flex-shrink: 0;
 }
 
 .footer-grid {
-    grid-template-columns: 38% 26% 26%;
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: 38% 26% 26%;
+    }
 }
-.blur{
+.blur {
     &-2px {
         filter: blur(2px);
     }
@@ -470,6 +530,18 @@ hr.bg-blue {
         opacity: 0.5;
         border-radius: 10rem;
     }
+}
+.oval-b11 {
+    background: #0c32a5;
+    mix-blend-mode: color-dodge;
+    opacity: 0.82;
+    filter: blur(125px);
+    transform: rotate(-24.43deg);
+    position: absolute;
+    width: 2678.97px;
+    height: 1248.07px;
+    top: -60rem;
+    left: -20rem;
 }
 @import "./patient_card";
 @import "./faq";

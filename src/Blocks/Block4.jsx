@@ -35,7 +35,7 @@ const Block4 = ({ close, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTwoBlu
                 <animated.img src={RaysL} className='w-full h-full  absolute top-0' alt="" style={{ opacity: raysSpectrTwoWhite.opacity }} />
             </animated.div>
             <div className="header-container container absolute flex text-2xl left-12 my-auto h-full">
-                <div className="w-5/12 h-full relative" style={{ height: '40rem' }}>
+                <div className="w-5/12 h-full relative" >
                     <animated.h2
                         style={{ color: raysSpectrTwoWhite.color }}
                         className="text-white header">спектр защиты<br />от Covid-19 </animated.h2>

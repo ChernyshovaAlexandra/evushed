@@ -3,7 +3,7 @@ import React from "react";
 
 const Block12 = () => {
     return (
-        <section className="p-12 bg-lavender relative z-40">
+        <section className="min-[1000px]:p-12 px-5 py-16 bg-lavender relative z-40">
             <div className="container mx-auto txt-after">
                 <p>COVID-19 — коронавирусная инфекция 2019 г.</p>
                 <p>* Гипотетический пациент.</p>

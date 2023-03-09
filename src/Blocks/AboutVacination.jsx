@@ -14,7 +14,7 @@ const AboutVacination = ({ blue_bg_block, blue_bg_block_image, scrollYProgress, 
             }}>
             <animated.div className="absolute top-0 w-full"
                 style={{
-                    opacity: scrollYProgress.to(s => (s > coordinates.block2.coordinates[0] && s < coordinates.block5.coordinates[0] ? '1' : '0')),
+                    opacity: scrollYProgress.to(s => (s > coordinates.block2.coordinates[0] + .01 && s < coordinates.block5.coordinates[0] ? '1' : '0')),
                     height: '100vh',
                     transform: blue_bg_block.transform,
                 }}
@@ -22,7 +22,7 @@ const AboutVacination = ({ blue_bg_block, blue_bg_block_image, scrollYProgress, 
                 <Block2
                     scrollYProgress={scrollYProgress}
                     blue_bg_block={blue_bg_block}
-                    />
+                />
             </animated.div>
             <animated.div className="absolute top-0 w-full h-full " style={{ transform: main_photo_to_right.transform }}>
                 <animated.div className="overflow-hidden fixed top-0 bg-neonBlue w-full"

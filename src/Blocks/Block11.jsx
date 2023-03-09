@@ -3,12 +3,13 @@ import banner from '../assets/images/banner.png'
 
 const Block11 = () => {
     return (
-        <section className="p-12 bg-white relative z-40">
+        <section className="min-[1000px]:p-12 px-5 py-16  min-[1000px]:bg-white bg-blue-grad relative overflow-hidden z-40">
             <div className="container mx-auto relative ">
-                <div className="w-full h-full rounded-xl mt-8 mx-auto bg-blue-grad overflow-hidden" src="">
+                <div className="block min-[600px]:hidden oval-b11"></div>
+                <div className="w-full h-full rounded-xl mt-8 mx-auto bg-blue-grad overflow-hidden max-[600px]:hidden" src="">
                     <img className="w-full h-full m-0" src={banner} alt="" />
                 </div>
-                <div className="absolute left-12 text-white w-6/12 bottom-0 top-0 my-auto h-fit">
+                <div className="min-[1000px]:absolute left-12 text-white min-[1000px]:w-6/12 bottom-0 top-0 my-auto h-fit">
                     <h2 className="header-sec text-white" style={{ marginBottom: '.75rem' }}>Консультация специалиста</h2>
                     <p className="txt-reg">Вы можете получить консультацию у специалистов в медицинских организациях вашего города</p>
                     <div className="rounded-lg lavender-grad p-4 mt-8">
