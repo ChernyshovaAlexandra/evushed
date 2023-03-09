@@ -18,7 +18,7 @@ import { modals } from "./assets/constants/modals";
 
 const App = () => {
   const [mobile, setMobile] = useState(window.innerWidth <= 1000)
-  const [modal, showModal] = useState(modals.sluzhba)
+  const [modal, showModal] = useState(modals.politika)
   useEffect(() => {
     const handleResize = () => {
       setMobile(window.innerWidth <= 1000)

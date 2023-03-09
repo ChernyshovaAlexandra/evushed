@@ -31,6 +31,12 @@
                 margin-top: 3rem;
             }
         }
+        h3 {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
         p {
             font-family: "Gilroy";
             font-size: 1rem;
@@ -39,10 +45,13 @@
             &:not(.text-pink) {
                 color: #75767b;
             }
-            &.font-bold{
+            &.font-bold {
                 font-size: 1.125rem;
-                margin-bottom: .25rem;
+                margin-bottom: 0.25rem;
                 margin-top: 1.5rem;
+                &.black {
+                    color: #0c0c0c;
+                }
             }
             ul {
                 list-style: initial;
