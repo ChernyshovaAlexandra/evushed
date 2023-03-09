@@ -8,9 +8,9 @@
 @import "./colors";
 @import "./mixins";
 
-#root{
+#root {
     width: 100vw;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 h1,
 .header {
@@ -35,8 +35,11 @@ h1,
     font-family: "Bebas Neue";
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem !important;
+    font-size: 4rem;
     line-height: 1;
+    @media screen and (max-width: 1200px) {
+        font-size: 3rem;
+    }
     &-container {
         @media screen and (min-width: 140px) {
             @media (min-height: 720px) {
@@ -100,6 +103,9 @@ h1,
 .w {
     &-42p {
         width: 47%;
+        @media screen and (max-width: 1550px) {
+            width: 45%;
+        }
     }
 }
 .img-container-vid {

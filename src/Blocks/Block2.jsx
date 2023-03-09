@@ -19,7 +19,7 @@ const Block2 = ({ scrollYProgress, blue_bg_block, pink }) => {
                 style={{
                     display: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] && s < coordinates.block4.coordinates[1] ? 'block' : 'none'))
                 }}
-                className="absolute w-42p container text-2xl top-0 bottom-0 my-auto h-fit text-white h2 words" >
+                className="absolute w-42p container min-[1000px]:text-xl min-[1400px]:text-2xl top-0 bottom-0 my-auto h-fit text-white h2 words" >
                 <animated.span className="type py-4 relative left-12 type-style"
                     style={{
                         backgroundPosition: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] ? `${s * 2500}vh 0` : '0 0')),

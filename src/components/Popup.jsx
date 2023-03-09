@@ -21,8 +21,8 @@ const Popup = ({ close }) => {
             <div className={`popup-inner relative xl:p-8 p-4 pt-16 bg-white rounded-lg  ${result ? 'setDisplayPopup' : ''}`}>
                 <div className="closebtn absolute top-4 right-4 cursor-pointer" onClick={() => close(false)}>
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 6L6 18" stroke="#AAABAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6 6L18 18" stroke="#AAABAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18 6L6 18" stroke="#AAABAE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M6 6L18 18" stroke="#AAABAE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>
                 {result ?
@@ -34,11 +34,11 @@ const Popup = ({ close }) => {
                             <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.81127 11.5946L15.9464 29L31.0815 11.5946" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 15L15.0583 26.3631C15.3743 27.248 16.6257 27.248 16.9417 26.3631L21 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M15.9463 29L15.9463 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
                             ` :
                                 `<svg class="w-7" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.4332 35.2991C14.4332 35.2991 17.9078 33.5124 22.6477 28.1523C27.3876 22.7922 27.5 20.1943 27.5 20.1943L14.4332 11.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M14.5668 11.0001L1.5 20.1943C1.5 20.1943 1.61236 22.7922 6.3523 28.1523C11.0922 33.5124 14.5668 35.2991 14.5668 35.2991L14.5668 11.0001Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
-                            <path d="M14.5 35L14.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M27.5 1V20L14.5 11V2L27.5 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1.5 20V1L14.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.4332 35.2991C14.4332 35.2991 17.9078 33.5124 22.6477 28.1523C27.3876 22.7922 27.5 20.1943 27.5 20.1943L14.4332 11.0001" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M14.5668 11.0001L1.5 20.1943C1.5 20.1943 1.61236 22.7922 6.3523 28.1523C11.0922 33.5124 14.5668 35.2991 14.5668 35.2991L14.5668 11.0001Z" fill="currentColor" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="bevel"/>
+                            <path d="M14.5 35L14.5 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M27.5 1V20L14.5 11V2L27.5 1Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round"/>
+                            <path d="M1.5 20V1L14.5 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round"/>
                             </svg>
                             `
                             } />

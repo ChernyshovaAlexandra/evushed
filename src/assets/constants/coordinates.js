@@ -9,15 +9,15 @@ export const coordinates = {
         coordinates: [.04, .16]
     },
     block4: {
-        coordinates: [.16, .22]
+        coordinates: [.16, .25]
     },
     block5: {
-        coordinates: [.22, .3]
+        coordinates: [.25, .34]
     },
     block6: {
-        coordinates: [.3, .46]
+        coordinates: [.34, .44]
     },
     block7: {
-        coordinates: [.55]
+        coordinates: [.45]
     }
 }

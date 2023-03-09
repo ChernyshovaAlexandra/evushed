@@ -14,6 +14,45 @@
         font-size: 1.25rem;
         max-height: 100vh;
         overflow-y: auto;
+        @media screen and (min-width: 1000px) {
+            max-height: 80vh;
+        }
+        h2 {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            line-height: 48px;
+            color: #0c0c0c;
+            text-transform: none;
+            &:not(:first-child) {
+                margin-top: 3rem;
+            }
+        }
+        p {
+            font-family: "Gilroy";
+            font-size: 1rem;
+            line-height: 22px;
+            margin-bottom: 1rem;
+            &:not(.text-pink) {
+                color: #75767b;
+            }
+            &.font-bold{
+                font-size: 1.125rem;
+                margin-bottom: .25rem;
+                margin-top: 1.5rem;
+            }
+            ul {
+                list-style: initial;
+                padding-left: 1rem;
+                li {
+                    padding-left: 0.5rem;
+                    display: list-item;
+                }
+            }
+        }
     }
 }
 
@@ -25,11 +64,11 @@
         cursor: pointer;
         position: relative;
         padding-left: 2.5rem;
-        color: #75767B;
-        &:hover{
+        color: #75767b;
+        &:hover {
             color: $black;
             &::before {
-                background: rgba(#f22e62 , .3);
+                background: rgba(#f22e62, 0.3);
             }
         }
         &::before {

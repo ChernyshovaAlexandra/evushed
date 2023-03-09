@@ -13,10 +13,12 @@ import Block13 from "./Blocks/Block13";
 import Popup from "./components/Popup";
 import { coordinates } from "./assets/constants/coordinates";
 import Mobile from "./components/Mobile";
+import Modal from "./components/Modal";
+import { modals } from "./assets/constants/modals";
 
 const App = () => {
   const [mobile, setMobile] = useState(window.innerWidth <= 1000)
-
+  const [modal, showModal] = useState(modals.sluzhba)
   useEffect(() => {
     const handleResize = () => {
       setMobile(window.innerWidth <= 1000)
@@ -104,13 +106,9 @@ const App = () => {
     <>
       {mobile ?
         <Mobile close={close} /> :
-        <div className={`relative content blue-bg-grad ${popup ? 'overflow-hidden' : ''}`} 
-        style={{
-          height: popup ? '100vh' : '',
-          width: '100vw', overflowX: 'hidden'
-        }} >
+        <div className="relative content blue-bg-grad">
           <Nav close={close} />
-          <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" ref={containerRef} style={{ height: '560vh' }}>
+          <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" ref={containerRef} style={{ height: '460vh' }}>
             <Main
               close={close}
               spectrZashityAll={spectrZashityAll}
@@ -123,10 +121,8 @@ const App = () => {
               mainBgRaysAnim={mainBgRaysAnim}
               scrollYProgress={scrollYProgress}
               main_photo_to_right={main_photo_to_right}
-            // 
             />
           </div>
-
           <Block7 />
           <Block8 scrollYProgress={scrollYProgress} />
           <Block9 />
@@ -134,14 +130,14 @@ const App = () => {
           <Block11 />
           <Block12 />
           <Block13 />
-
-        </div >
+        </div>
       }
       {popup ? <Popup close={close} /> : null}
+      {modal ? <Modal content={modal} close={showModal} /> : null}
       {
         cookies ? null :
-          <div className="bg-pink text-white fixed bottom-0 left-0 w-full px-12 py-8 cookies">
-            <div className="flex gap-4 items-center mx-auto w-11/12">
+          <div className="bg-pink text-white fixed bottom-0 left-0 w-full min-[1000px]:px-12 p-5 min-[1000px]:py-8 cookies">
+            <div className="min-[1000px]:flex-row flex-col flex gap-4 items-center mx-auto w-11/12">
               <div className="">
                 <p className="font-bold">Политика Cookie</p>
                 <p className="mt-2 font-normal">Этот сайт использует файлы cookies, чтобы облегчить вам пользование нашим веб-сайтом. Продолжая использовать этот веб-сайт, вы даете согласие на использование файлов cookies. Подробнее о том, как мы пользуемся файлами cookies и как ими управлять, вы можете узнать нажав на ссылку.</p>

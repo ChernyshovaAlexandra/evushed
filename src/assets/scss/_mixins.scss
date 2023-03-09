@@ -20,9 +20,12 @@
     font-family: "Bebas Neue";
     font-style: normal;
     font-weight: 700;
-    font-size: 5rem !important;
+    font-size: 5rem;
     filter: drop-shadow(-2px 2px 43px #3e6bf4);
     line-height: 1;
+    @media screen and (max-width:1200px){
+        font-size: 3.6rem;
+    }
 }
 @mixin gilroy {
     font-family: "Gilroy";

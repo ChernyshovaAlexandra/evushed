@@ -13,7 +13,7 @@ const MainBg = () => {
                 <rect width="2197" height="1200" fill="url(#paint0_linear_947_552)" />
                 <g opacity="0.5" filter="url(#filter0_ddif_947_552)">
                     <path d="M1017 1200L2194.5 245V1200H1017Z" fill="#0F072C" />
-                    <path d="M2196.5 245V240.803L2193.24 243.447L1015.74 1198.45L1011.36 1202H1017H2194.5H2196.5V1200V245Z" stroke="#443EFF" stroke-width="4" />
+                    <path d="M2196.5 245V240.803L2193.24 243.447L1015.74 1198.45L1011.36 1202H1017H2194.5H2196.5V1200V245Z" stroke="#443EFF" strokeWidth="4" />
                 </g>
                 <g opacity="0.5" filter="url(#filter1_f_947_552)">
                     <path d="M2199 1200H1233L2199 587V1200Z" fill="#B32EF2" />
@@ -23,7 +23,7 @@ const MainBg = () => {
                 </g>
                 <g opacity="0.5" filter="url(#filter3_ddif_947_552)">
                     <path d="M545.223 0H3V1200H745L545.223 0Z" fill="#0F072C" />
-                    <path d="M3 -2H1V0V1200V1202H3H745H747.36L746.973 1199.67L547.196 -0.328441L546.918 -2H545.223H3Z" stroke="#443EFF" stroke-width="4" />
+                    <path d="M3 -2H1V0V1200V1202H3H745H747.36L746.973 1199.67L547.196 -0.328441L546.918 -2H545.223H3Z" stroke="#443EFF" strokeWidth="4" />
                 </g>
                 <g opacity="0.2" filter="url(#filter4_ddif_947_552)">
                     <path d="M545.223 0H-1.5V1200H745L545.223 0Z" fill="#0F072C" />
@@ -45,7 +45,7 @@ const MainBg = () => {
                 </g>
                 <g opacity="0.5" filter="url(#filter10_ddif_947_552)">
                     <path d="M356 0L2197 699.5L2199 0H356Z" fill="#0F072C" />
-                    <path d="M2196.29 701.37L2198.99 702.396L2199 699.506L2201 0.00571835L2201.01 -2H2199H356L355.29 1.86959L2196.29 701.37Z" stroke="#443EFF" stroke-width="4" />
+                    <path d="M2196.29 701.37L2198.99 702.396L2199 699.506L2201 0.00571835L2201.01 -2H2199H356L355.29 1.86959L2196.29 701.37Z" stroke="#443EFF" strokeWidth="4" />
                 </g>
                 <g opacity="0.45" filter="url(#filter11_ddif_947_552)">
                     <path d="M356 0L2197 699V0H356Z" fill="#092477" />
