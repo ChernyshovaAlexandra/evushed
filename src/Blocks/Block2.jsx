@@ -19,17 +19,17 @@ const Block2 = ({ scrollYProgress, blue_bg_block, pink }) => {
                 style={{
                     display: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] && s < coordinates.block4.coordinates[1] ? 'block' : 'none'))
                 }}
-                className="absolute w-42p container min-[1000px]:text-xl min-[1400px]:text-2xl top-0 bottom-0 my-auto h-fit text-white h2 words" >
+                className="absolute w-42p contentmin-[1000px]:text-xl min-[1400px]:text-2xl top-0 bottom-0 my-auto h-fit text-white h2 words" >
                 <animated.span className="type py-4 relative left-12 type-style"
                     style={{
-                        backgroundPosition: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] ? `${s * 2500}vh 0` : '0 0')),
-                        transition: 'all .35s linear'
+                        // backgroundPosition: scrollYProgress.to(s => (s > coordinates.block3.coordinates[0] ? `${s * 2900}vh 0` : '0 0')),
+                        transition: 'all .15s linear'
                     }}>
                     Вакцинация является важной опцией
                     профилактики коронавирусной инфекции,
                     однако не всегда она обеспечивает
                     необходимую защиту<small style={{ display: 'inline' }}>2</small>. Люди со сниженным
-                    иммунитетом могут нуждаться в дополнительной защите от COVID-19<small style={pink}>3-5</small>
+                    иммунитетом <span className="text-pink">могут нуждаться в дополнительной защите</span> от COVID-19<small className="text-pink" style={pink}>3-5</small>
                 </animated.span>
             </animated.div>
             <animated.a href="#spectr"

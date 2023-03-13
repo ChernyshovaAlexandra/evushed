@@ -11,5 +11,10 @@ export const modals = {
     reclamacia: <Reklamacia />,
     nezhelat: <Nezhelat_yavleniye />,
     sluzhba: <Sluzhba />,
-    politika: <Politika />
+    politika: <Politika />,
+    number_odobr: '',
+    date_odobr: '',
+    date_finish: ''
 }
+
+

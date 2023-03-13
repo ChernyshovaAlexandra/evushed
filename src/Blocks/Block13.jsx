@@ -7,13 +7,14 @@ import img11 from '../assets/images/11.jpg'
 import img21 from '../assets/images/21.jpg'
 import img31 from '../assets/images/31.jpg'
 import img41 from '../assets/images/41.jpg'
+import { modals } from "../assets/constants/modals";
 
-const Block13 = () => {
+const Block13 = ({ showModal }) => {
     return (
         <section className="min-[1000px]:px-20 px-5 py-16 bg-darkBlue text-white relative z-40">
-            <div className="container mx-auto">
+            <div className="contentmx-auto">
                 <p className="text-sm mt-2 txt-footer">Здесь вам могут помочь с информацией относительно вашего заболевания: </p>
-                <div className="mt-8 grid min-[1000px]:grid-cols-4 gap-8">
+                <div className="mt-8 grid min-[1100px]:grid-cols-4 min-[600px]:grid-cols-2 gap-8">
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
                         <img className="w-full h-full object-cover -my-1 object-center max-[1000px]:hidden" src={img1} />
                         <img className="w-full h-full object-cover -my-1 object-center hidden max-[1000px]:block" src={img11} />
@@ -37,9 +38,9 @@ const Block13 = () => {
                     <div className="grid gap-12 footer-grid">
                         <div className="col">
                             <i className="text-lg mb-4 block txt-astra"> © 2022 «AstraZeneсa». Все права защищены</i>
-                            <p className="mt-2 txt-base">  Номер одобрения: RU-14098</p>
-                            <p className="mt-2 txt-base">  Дата одобрения: 19/08/2022</p>
-                            <p className="mt-2 txt-base">  Дата истечения: 18/08/2024</p>
+                            <p className="mt-2 txt-base">  Номер одобрения: {modals.number_odobr}</p>
+                            <p className="mt-2 txt-base">  Дата одобрения: {modals.date_odobr}</p>
+                            <p className="mt-2 txt-base">  Дата истечения: {modals.date_finish}</p>
                         </div>
                         <div className="col">
                             <p className="txt-footer">Контакты</p>
@@ -47,17 +48,17 @@ const Block13 = () => {
                             <p className="txt-base mt-2"> 123112, г. Москва, 1-й Красногвардейский<br />проезд, д.21, стр.1.</p>
                             <p className="txt-base mt-2"> Тел.: +7 (495) 799-56-99, <br />факс: +7 (495) 799-56-98</p>
                             <p className="txt-base mt-2">
-                                <a href="www.astrazeneca.ru">
+                                <a href="www.astrazeneca.ru" className="cursor-pointer hover:underline">
                                     www.astrazeneca.ru</a></p>
                         </div>
                         <div className="col">
                             <p className="txt-footer">Информация</p>
-                            <p className="txt-base mt-2"> Политика конфиденциальности</p>
-                            <p className="txt-base mt-2"> Правовая информация</p>
-                            <p className="txt-base mt-2"> Контактная информация</p>
-                            <p className="txt-base mt-2"> Сообщить о рекламации на лекарственный<br />препарат</p>
-                            <p className="txt-base mt-2"> Сообщить о нежелательном явлении</p>
-                            <p className="txt-base mt-2"> Служба Медицинской Информации</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.politika)}> Политика конфиденциальности</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.ogranighenie_otvetstvennosty)}> Правовая информация</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.contacts)}> Контактная информация</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.reclamacia)}> Сообщить о рекламации на лекарственный<br />препарат</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.nezhelat)}> Сообщить о нежелательном явлении</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.sluzhba)}> Служба Медицинской Информации</p>
                         </div>
 
                     </div>

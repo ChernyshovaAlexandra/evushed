@@ -19,6 +19,15 @@ h1,
     letter-spacing: 0.8px;
     &.f-small {
         font-size: 2.75rem !important;
+        @media screen and (min-width:320px){
+            font-size: 2rem!important;
+        }
+        @media screen and (min-width:360px){
+            font-size: 2.5rem!important;
+        }
+        @media screen and (min-width:400px){
+            font-size: 2.5rem!important;
+        }
     }
 }
 .lavender-grad {
@@ -42,12 +51,24 @@ h1,
     }
     &-container {
         @media screen and (min-width: 140px) {
-            @media (min-height: 720px) {
-                max-height: 77vh;
+            @media (min-height: 600px) {
+                max-height: 80vh;
+                zoom: 0.85;
+                top: 35vh;
+            }
+            @media (min-height: 800px) {
+                max-height: 72vh;
+                zoom: 1;
                 top: 25vh;
             }
-            @media (min-height: 930px) {
-                max-height: 65vh;
+            @media (min-height: 1000px) {
+                max-height: 60vh;
+            }
+        }
+        @media screen and (min-width: 1040px) {
+            @media (max-height: 770px) {
+                top: 25vh;
+                max-height: 96vh;
             }
         }
     }
@@ -109,7 +130,7 @@ h1,
     }
 }
 .img-container-vid {
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
         padding-bottom: 57%;
         height: 0;
         img {
@@ -246,6 +267,60 @@ h2,
 p {
     @include gilroy;
 }
+.modal {
+    @media screen and (max-width: 1000px) {
+        .popup-inner_content {
+            padding-bottom: 3rem;
+        }
+    }
+    .btn {
+        position: relative;
+        z-index: 80;
+    }
+    &::after,
+    &::before {
+        content: "";
+        position: fixed;
+        z-index: 70;
+        touch-action: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 7rem;
+        background: linear-gradient(#f5f6f9, transparent);
+        @media screen and (min-width: 1000px) {
+            top: 10vh;
+            max-width: 1040px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 0.5rem;
+        }
+    }
+    &::before {
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(transparent, #f5f6f9);
+        @media screen and (min-width: 1000px) {
+            bottom: 10vh;
+            top: auto;
+        }
+    }
+    .closebtn {
+        position: fixed;
+        z-index: 101;
+        @media screen and (min-width: 1000px) {
+            top: 11.5vh;
+            right: calc((100vw - 1040px) / 2 + 1rem);
+        }
+    }
+}
+.description{
+    @media screen and (min-width:650px){
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}
 .btn {
     @include button;
     &-small {
@@ -261,6 +336,10 @@ p {
     &-transparent {
         background: #fff;
         border: 2px solid $pink;
+        &2 {
+            border: 2px solid #fff;
+            background: transparent;
+        }
         &:hover {
             background: #fbdde5;
         }
@@ -305,7 +384,9 @@ hr.bg-blue {
         color: $black;
     }
     &-blue {
-        color: $blue;
+        &:not(.min-\[1000px\]\:text-white) {
+            color: $blue;
+        }
     }
     &-darkBlue {
         color: $darkBlue;

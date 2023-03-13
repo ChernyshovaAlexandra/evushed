@@ -24,7 +24,7 @@ const Heading = ({ scrollYProgress, close, mainBgRaysAnim, blue_bg_block_image, 
                         opacity: blue_bg_block_image.opacity
                     }} src={mainBg} alt="" />
 
-                <div className="container px-12 main-text left-0 right-0 h-fit absolute mx-auto w-full">
+                <div className="contentpx-12 main-text left-0 right-0 h-fit absolute mx-auto w-full">
                     <div className="pb-8 mx-auto">
                         <animated.h1
                             style={{ opacity: mainBgRaysAnim.opacity }}

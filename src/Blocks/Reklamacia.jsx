@@ -1,4 +1,5 @@
 import React from "react";
+import { modals } from "../assets/constants/modals";
 
 
 const Reklamacia = () => {
@@ -10,8 +11,7 @@ const Reklamacia = () => {
             <p><a className="text-pink" href="tel:+74957995699">8 (495) 799-56-99</a></p>
             <p className="font-bold">По электронной почте:</p>
             <p><a className="text-pink underline hover:no-underline" href="mailto:ProductQuality.ru@astrazeneca.com">ProductQuality.ru@astrazeneca.com</a></p>
-            <p className="mt-16">Номер одобрения: RU-14202. Дата одобрения: 29.08.2022. Дата истечения: 28.08.2024
-            </p>
+            <p className="mt-16">Номер одобрения: {modals.number_odobr}. Дата одобрения: {modals.date_odobr}. Дата истечения:{modals.date_finish}</p>
         </div>
     )
 }

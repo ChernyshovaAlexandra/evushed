@@ -47,9 +47,8 @@ const Block8 = ({ }) => {
                 640: {
                     slidesPerView: 2.2,
                     spaceBetween: 20,
-                    navigation: false,
                 },
-                1024: {
+                1000: {
                     slidesPerView: 2.5,
                     spaceBetween: 30,
                 },
@@ -65,19 +64,19 @@ const Block8 = ({ }) => {
     }, [])
     return (
         <section className="min-[1000px]:pb-12 min-[1000px]:pt-36 py-16 bg-blue-grad w-full z-50 relative">
-            <div className="container min-[1000px]:mx-auto max-[600px]:w-11/12 min-[1000px]:px-12 px-5">
+            <div className="contentmin-[1000px]:mx-auto max-[1000px]:w-11/12 min-[1000px]:px-12 px-5">
                 <h2 className="font-normal text-4xl text-white header-sec">Кому может быть необходима<br /> пассивная иммунизация от Covid-19?</h2>
             </div>
             <div className="pl-5 min-[1000px]:pl-12 min-[1000px]:mx-auto swiper-inner-cont">
                 <swiper-container init="false">
-                    {patients.map((pat, id) => (
+                    {patients && patients.map((pat, id) => (
                         <swiper-slide key={id} >
                             <PatientCard last={id === patients.length - 1} data={pat} odd={id % 2 === 0} />
                         </swiper-slide>
                     ))}
 
                 </swiper-container>
-                <div className="hidden max-[600px]:flex gap-6 mt-8 p-5">
+                <div className="hidden max-[1000px]:flex gap-6 mt-8 p-5">
                     <Prev ref={prevRef} />
                     <Next ref={nextRef} />
                 </div>

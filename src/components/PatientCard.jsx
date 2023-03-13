@@ -3,7 +3,7 @@ import React from "react";
 
 const PatientCard = ({ data, odd,last }) => {
     return (
-        <div className={`bg-white rounded-lg patient-card h-fit max-[600px]:ml-5 ${last ? 'mr-5' : ''} ${odd ? '' : 'min-[1000px]:mt-24'}`}>
+        <div className={`bg-white rounded-lg patient-card h-fit max-[1000px]:ml-5 ${last ? 'mr-5' : ''} ${odd ? '' : 'min-[1000px]:mt-24'}`}>
             <div className="rounded-xl overflow-hidden w-full relative patient-card_img bg-blue-grad">
                 <img className="absolute top-0 left-0 w-full h-full object-cover object-center" src={data.img} alt="" />
             </div>

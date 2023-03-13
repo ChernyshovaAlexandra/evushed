@@ -4,14 +4,14 @@ import Video from '../assets/images/video-bg.jpeg'
 const Block9 = () => {
     return (
         <section className="min-[1000px]:p-12 px-5 py-16 bg-lavender relative z-40">
-            <div className="container mx-auto relative">
+            <div className="contentmx-auto relative">
                 <div className="w-full h-full rounded-3xl mx-auto video overflow-hidden" >
-                    <div className="w-full max-[600px]:relative img-container-vid max-[600px]:rounded-2xl overflow-hidden">
-                        <img className="max-[600px]:absolute max-[600px]:h-full max-[600px]:w-full" src={Video} alt="" />
+                    <div className="w-full max-[1000px]:relative img-container-vid max-[1000px]:rounded-2xl overflow-hidden">
+                        <img className="max-[1000px]:absolute max-[1000px]:h-full max-[1000px]:w-full" src={Video} alt="" />
                     </div>
-                    <div className="min-[600px]:absolute min-[600px]:p-8 left-8 top-8 max-[600px]:mt-8">
+                    <div className="min-[1000px]:absolute min-[1000px]:p-8 left-8 top-8 max-[1000px]:mt-8">
                         <h2 className="font-normal header-sec changeColor">Коронавирус изменил<br /> жизнь многих из нас</h2>
-                        <p className="text-blue min-[600px]:text-white min-[600px]:mt-6 -mt-8 max-[600px]:font-medium">Истории пациентов со сниженным иммунитетом</p>
+                        <p className="text-blue min-[1000px]:text-white min-[1000px]:mt-6 -mt-8 max-[1000px]:font-medium">Истории пациентов со сниженным иммунитетом</p>
                         <button className="mt-8 btn flex gap-2 w-fit">Смотреть
                             <svg className="w-6 h-6" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19.5698 19.8201C19.3798 19.8201 19.1898 19.7501 19.0398 19.6001C18.7498 19.3101 18.7498 18.8301 19.0398 18.5401C22.6498 14.9301 22.6498 9.06012 19.0398 5.46012C18.7498 5.17012 18.7498 4.69012 19.0398 4.40012C19.3298 4.11012 19.8098 4.11012 20.0998 4.40012C24.2898 8.59012 24.2898 15.4101 20.0998 19.6001C19.9498 19.7501 19.7598 19.8201 19.5698 19.8201Z" fill="white" />

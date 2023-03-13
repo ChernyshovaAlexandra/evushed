@@ -31,7 +31,7 @@ const Block4 = ({ close, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTwoBlu
             </div>
             <animated.div
                 className={`w-full h-full relative overflow-hidden `}>
-                <animated.img src={Rays} className='w-full h-full absolute top-0 ' alt="" style={{ opacity: 1 - raysSpectrOneBlue.opacity }} />
+                <animated.img src={Rays} className='w-full h-full absolute top-0 ' alt="" style={{ opacity: (1 - raysSpectrOneBlue.opacity) }} />
                 <animated.img src={RaysL} className='w-full h-full  absolute top-0' alt="" style={{ opacity: raysSpectrTwoWhite.opacity }} />
             </animated.div>
             <div className="header-container container absolute flex text-2xl left-12 my-auto h-full">

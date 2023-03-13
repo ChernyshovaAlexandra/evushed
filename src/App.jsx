@@ -18,7 +18,7 @@ import { modals } from "./assets/constants/modals";
 
 const App = () => {
   const [mobile, setMobile] = useState(window.innerWidth <= 1000)
-  const [modal, showModal] = useState(modals.politika)
+  const [modal, showModal] = useState(false)
   useEffect(() => {
     const handleResize = () => {
       setMobile(window.innerWidth <= 1000)
@@ -34,7 +34,6 @@ const App = () => {
     checkCookies(true)
   }
   const containerRef = useRef(null);
-
 
   const [main_photo_to_right, move_main_photo] = useSpring(() => ({ transform: 'translateX(0%)', display: 'block', opacity: 1 }));
   const [blue_bg_block, blueBgBlockApi] = useSpring(() => ({ transform: 'translateX(-35%)', }));
@@ -104,34 +103,36 @@ const App = () => {
 
   return (
     <>
-      {mobile ?
-        <Mobile close={close} /> :
-        <div className="relative content blue-bg-grad">
-          <Nav close={close} />
-          <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" ref={containerRef} style={{ height: '460vh' }}>
-            <Main
-              close={close}
-              spectrZashityAll={spectrZashityAll}
-              raysSpectrTwoBlue={raysSpectrTwoBlue}
-              raysSpectrTwoWhite={raysSpectrTwoWhite}
-              raysSpectrOneBlue={raysSpectrOneBlue}
-              main_bg_gradient={main_bg_gradient}
-              blue_bg_block={blue_bg_block}
-              blue_bg_block_image={blue_bg_block_image}
-              mainBgRaysAnim={mainBgRaysAnim}
-              scrollYProgress={scrollYProgress}
-              main_photo_to_right={main_photo_to_right}
-            />
+      <div ref={containerRef}>
+        {mobile ?
+          <Mobile showModal={showModal} close={close} scrollYProgress={scrollYProgress} /> :
+          <div className="relative content blue-bg-grad">
+            <Nav close={close} scrollYProgress={scrollYProgress} />
+            <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" style={{ height: '460vh' }}>
+              <Main
+                close={close}
+                spectrZashityAll={spectrZashityAll}
+                raysSpectrTwoBlue={raysSpectrTwoBlue}
+                raysSpectrTwoWhite={raysSpectrTwoWhite}
+                raysSpectrOneBlue={raysSpectrOneBlue}
+                main_bg_gradient={main_bg_gradient}
+                blue_bg_block={blue_bg_block}
+                blue_bg_block_image={blue_bg_block_image}
+                mainBgRaysAnim={mainBgRaysAnim}
+                scrollYProgress={scrollYProgress}
+                main_photo_to_right={main_photo_to_right}
+              />
+            </div>
+            <Block7 />
+            <Block8 scrollYProgress={scrollYProgress} />
+            <Block9 />
+            <QA />
+            <Block11 />
+            <Block12 />
+            <Block13 showModal={showModal} />
           </div>
-          <Block7 />
-          <Block8 scrollYProgress={scrollYProgress} />
-          <Block9 />
-          <QA />
-          <Block11 />
-          <Block12 />
-          <Block13 />
-        </div>
-      }
+        }
+      </div>
       {popup ? <Popup close={close} /> : null}
       {modal ? <Modal content={modal} close={showModal} /> : null}
       {

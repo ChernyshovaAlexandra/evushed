@@ -46,12 +46,12 @@
     }
 }
 .type {
-    color: transparent !important;
-    background: linear-gradient(45deg, rgb(12, 50, 165), #fff);
-    background-size: 400%;
-    background-position: 0 0;
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: #fff !important;
+    // background: linear-gradient(45deg, rgb(12, 50, 165), #fff);
+    // background-size: 400%;
+    // background-position: 0 0;
+    // -webkit-background-clip: text;
+    // background-clip: text;
     // -webkit-box-decoration-break: clone;
     small {
         vertical-align: top;

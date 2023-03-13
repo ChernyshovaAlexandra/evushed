@@ -13,19 +13,19 @@ import QA from "../Blocks/QA";
 import Block11 from "../Blocks/Block11";
 import Block12 from "../Blocks/Block12";
 import Block13 from "../Blocks/Block13";
+import { animated } from '@react-spring/web'
 
 
 
 
-
-const Mobile = ({ close }) => {
+const Mobile = ({ close, showModal, scrollYProgress }) => {
     const [menu, showMenu] = useState(false)
     const toggleMenu = () => {
         showMenu(!menu)
     }
     return (
         <>
-            <nav className="fixed top-4 w-full z-20 flex justify-between px-5 items-center"  style={{ zIndex: 1000 }}>
+            <nav className="fixed top-4 w-full z-20 flex justify-between px-5 items-center" style={{ zIndex: 80 }}>
                 <div className="logo h-fit cursor-pointer relative" style={{ zIndex: 1001 }}>
                     <svg className={`w-10 h-10 ${menu ? 'text-pink' : 'text-white'}`} viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_854_5724)">
@@ -59,7 +59,6 @@ const Mobile = ({ close }) => {
                 }
             </nav>
             <div className={`content bg-lavender relative ${menu ? 'overflow-hidden' : ''}`}>
-
                 <main className="text-white relative">
                     <div className="w-full">
                         <img className="object-cover" src={rays} alt="" style={{ height: '100vh', width: '100%' }} />
@@ -73,10 +72,25 @@ const Mobile = ({ close }) => {
                         <button className="btn mx-auto block mt-8 " onClick={() => close(true)}>Пройти опрос**</button>
                     </div>
                 </main>
-                <section className="sec-image">
-                    <img className="w-full" src={img} alt="" />
-                </section>
+
                 <section className="about-vac relative bg-neonBlue text-white px-6 py-16">
+                    <animated.section className="sec-image absolute top-0 w-full h-full left-0 z-50"
+                        style={{
+                            transition: 'all .6s ease-out',
+                            transform: scrollYProgress.to(s => (s > .06 && s < .2 ? 'translateX(100%)' : '')),
+
+                        }}
+                    >
+                        <animated.img className="w-full" src={img} alt=""
+                            style={{
+                                transition: 'all .6s ease-out',
+
+                                clipPath: scrollYProgress.to(s => (
+                                    s > .05 && s < .2 ? 'polygon(32% 0px, 100% 0px, 100% 50%, 100% 100%, 32% 100%, 13% 50%)' : 'polygon(0% 0px, 100% 0px, 100% 50%, 100% 100%, 40% 100%, 0% 100%)'
+                                ))
+                            }}
+                        />
+                    </animated.section>
                     <div className=" text-lg font-bold spacing-05 uppercase ">Вакцинация является важной опцией профилактики коронавирусной инфекции, однако не всегда она обеспечивает необходимую защиту.<sup>[1]</sup> Люди со сниженным иммунитетом
                         <span className="text-pink"> могут нуждаться в дополнительной защите</span> от COVID-19<sup className="text-pink">[2-4]</sup>
                     </div>
@@ -135,7 +149,7 @@ const Mobile = ({ close }) => {
                 <QA />
                 <Block11 />
                 <Block12 />
-                <Block13 />
+                <Block13 showModal={showModal} />
 
             </div>
         </>

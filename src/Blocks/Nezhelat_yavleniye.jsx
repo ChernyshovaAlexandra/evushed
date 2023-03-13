@@ -1,4 +1,5 @@
 import React from "react";
+import { modals } from "../assets/constants/modals";
 
 
 const Nezhelat_yavleniye = () => {
@@ -15,7 +16,7 @@ const Nezhelat_yavleniye = () => {
                 </ul>
             </p>
             <p>Пожалуйста, обратите внимание, что передавая запрос о нежелательном явлении любым из вышеуказанных способом, вы признаете, что ознакомились с условиями настоящей <span className="text-pink underline hover:no-underline">Политики об обработке персональных данных</span> ООО «АстраЗенека Фармасьютикалз» и согласны на обработку ваших персональных данных на указанных в ней условиях.</p>
-            <p className="mt-16">Номер одобрения: RU-14202. Дата одобрения: 29.08.2022. Дата истечения: 28.08.2024</p>
+            <p className="mt-16">Номер одобрения: {modals.number_odobr}. Дата одобрения: {modals.date_odobr}. Дата истечения:{modals.date_finish}</p>
         </div>
     )
 }
