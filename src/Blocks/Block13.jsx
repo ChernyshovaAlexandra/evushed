@@ -12,7 +12,7 @@ import { modals } from "../assets/constants/modals";
 const Block13 = ({ showModal }) => {
     return (
         <section className="min-[1000px]:px-20 px-5 py-16 bg-darkBlue text-white relative z-40">
-            <div className="contentmx-auto">
+            <div className="content mx-auto">
                 <p className="text-sm mt-2 txt-footer">Здесь вам могут помочь с информацией относительно вашего заболевания: </p>
                 <div className="mt-8 grid min-[1100px]:grid-cols-4 min-[600px]:grid-cols-2 gap-8">
                     <div className="bg-blue rounded-xl grid items-center overflow-hidden">
@@ -53,22 +53,22 @@ const Block13 = ({ showModal }) => {
                         </div>
                         <div className="col">
                             <p className="txt-footer">Информация</p>
-                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.politika)}> Политика конфиденциальности</p>
-                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.ogranighenie_otvetstvennosty)}> Правовая информация</p>
-                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.contacts)}> Контактная информация</p>
-                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.reclamacia)}> Сообщить о рекламации на лекарственный<br />препарат</p>
-                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.nezhelat)}> Сообщить о нежелательном явлении</p>
-                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(modals.sluzhba)}> Служба Медицинской Информации</p>
-                        </div>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['politika', modals.politika])}> Политика конфиденциальности</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['ogranighenie_otvetstvennosty', modals.ogranighenie_otvetstvennosty])}> Правовая информация</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['contacts', modals.contacts])}> Контактная информация</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['reclamacia', modals.reclamacia])}> Сообщить о рекламации на лекарственный<br />препарат</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['nezhelat', modals.nezhelat])}> Сообщить о нежелательном явлении</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['sluzhba', modals.sluzhba])}> Служба Медицинской Информации</p >
+                        </div >
 
-                    </div>
+                    </div >
                     <div className="w-full mt-8">
                         <p className="txt-footer-big mt-2">Материал предназначен для широкой аудитории. Информация, представленная в данном разделе, не представляет собой и не заменяет консультацию врача. Необходимо получить консультацию врача.</p>
                         <p className="txt-footer-big mt-2">Изображения задействованных моделей используются исключительно с целью иллюстрации и не свидетельствуют об одобрении ими деятельности или использовании ими продукции/услуги/торговой марки.</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div >
+            </div >
+        </section >
     )
 }
 

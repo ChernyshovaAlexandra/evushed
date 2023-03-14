@@ -29,8 +29,8 @@ export const qa = [
                 <p>Первые три широко распространены в России. Есть и совершенно безобидные варианты. Например, штамм «Эпсилон» Всемирной организацией здравоохранения признан непатогенным.</p>
                 
                 <ol class="text-gray-500 mt-12">
-                 <li>Шейбак В. М., Горецкая М. В. Разработка вакцин от SARS-CoV-2 [Электронный ресурс]. – <a href="http://journal-grsmu.by/index.php/ojs/article/view/2749/2492" class='text-pink hover:no-underline underline'>http://journal-grsmu.by/index.php/ojs/article/view/2749/2492</a>.</li>
-                 <li>World Health Organization. Tracking SARS-CoV-2 variants [Электронный ресурс]. –  <a href="https://www.who.int/en/activities/tracking-SARS-CoV-2-variants" class='text-pink hover:no-underline underline'>https://www.who.int/en/activities/tracking-SARS-CoV-2-variants</a>.</li>
+                 <li>Шейбак В. М., Горецкая М. В. Разработка вакцин от SARS-CoV-2 [Электронный ресурс]. – <a href="http://journal-grsmu.by/index.php/ojs/article/view/2749/2492" class='text-pink hover:no-underline underline break-all'>http://journal-grsmu.by/index.php/ojs/article/view/2749/2492</a>.</li>
+                 <li>World Health Organization. Tracking SARS-CoV-2 variants [Электронный ресурс]. –  <a href="https://www.who.int/en/activities/tracking-SARS-CoV-2-variants" class='text-pink hover:no-underline underline break-all'>https://www.who.int/en/activities/tracking-SARS-CoV-2-variants</a>.</li>
                 </ol>
                 
                 <div>`} />

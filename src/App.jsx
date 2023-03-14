@@ -27,7 +27,7 @@ const App = () => {
   })
 
   let cook = localStorage.getItem('astra-zeneka-cookie');
-  const [popup, close] = useState(false)
+  const [popup, showPopup] = useState(false)
   const [cookies, checkCookies] = useState(cook);
   const setCookies = () => {
     localStorage.setItem('astra-zeneka-cookie', 'true')
@@ -50,13 +50,13 @@ const App = () => {
   const { scrollYProgress } = useScroll({
     constiner: containerRef,
     onChange: ({ value: { scrollYProgress } }) => {
-      // console.log(scrollYProgress)
+    
       set_main_bg_gradient.start({
         opacity: scrollYProgress > coordinates.block1.coordinates[0] + .004 ? 0 : 1
       })
       mainBgRaysApi.start({
-        opacity: scrollYProgress >= coordinates.block1.coordinates[0] + .005 ? 0 : 1,
-        transform: scrollYProgress < coordinates.block2.coordinates[0] ? 'scale(1.35)' : 'scale(3)'
+        opacity: scrollYProgress >= coordinates.block1.coordinates[0] + .01 ? 0 : 1,
+        transform: scrollYProgress < coordinates.block2.coordinates[0] - .005 ? 'scale(1.35)' : 'scale(3)'
       });
 
       blueBgBlockImageApi.start({
@@ -105,12 +105,12 @@ const App = () => {
     <>
       <div ref={containerRef}>
         {mobile ?
-          <Mobile showModal={showModal} close={close} scrollYProgress={scrollYProgress} /> :
+          <Mobile showModal={showModal} showPopup={showPopup} scrollYProgress={scrollYProgress} /> :
           <div className="relative content blue-bg-grad">
-            <Nav close={close} scrollYProgress={scrollYProgress} />
+            <Nav showPopup={showPopup} scrollYProgress={scrollYProgress} />
             <div className="overflow-y-scroll overflow-x-hidden bg-lavender relative z-30" style={{ height: '460vh' }}>
               <Main
-                close={close}
+                showPopup={showPopup}
                 spectrZashityAll={spectrZashityAll}
                 raysSpectrTwoBlue={raysSpectrTwoBlue}
                 raysSpectrTwoWhite={raysSpectrTwoWhite}
@@ -133,7 +133,7 @@ const App = () => {
           </div>
         }
       </div>
-      {popup ? <Popup close={close} /> : null}
+      {popup ? <Popup showPopup={showPopup} /> : null}
       {modal ? <Modal content={modal} close={showModal} /> : null}
       {
         cookies ? null :

@@ -10,8 +10,7 @@ import { coordinates } from "../assets/constants/coordinates";
 
 
 
-const Main = ({ close,
-    secBlockAnim,
+const Main = ({ showPopup,
     spectrZashityAll,
     raysSpectrTwoBlue,
     scrollYProgress,
@@ -37,7 +36,7 @@ const Main = ({ close,
                     main_bg_gradient={main_bg_gradient}
                     blue_bg_block_image={blue_bg_block_image}
                     scrollYProgress={scrollYProgress}
-                    close={close}
+                    showPopup={showPopup}
                     mainBgRaysAnim={mainBgRaysAnim}
                 />
                 <animated.section className="w-full fixed top-0" id='spectr'
@@ -45,7 +44,7 @@ const Main = ({ close,
                         zIndex: scrollYProgress.to(s => s >= coordinates.block4.coordinates[0] && s <= coordinates.block6.coordinates[1] ? '40' : '0')
                     }}
                 >
-                    <ImageBlock close={close}
+                    <ImageBlock showPopup={showPopup}
                         spectrZashityAll={spectrZashityAll}
                         raysSpectrTwoBlue={raysSpectrTwoBlue}
                         raysSpectrOneBlue={raysSpectrOneBlue}

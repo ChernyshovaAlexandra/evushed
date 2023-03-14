@@ -4,7 +4,7 @@ import Video from '../assets/images/video-bg.jpeg'
 const Block9 = () => {
     return (
         <section className="min-[1000px]:p-12 px-5 py-16 bg-lavender relative z-40">
-            <div className="contentmx-auto relative">
+            <div className="content mx-auto relative">
                 <div className="w-full h-full rounded-3xl mx-auto video overflow-hidden" >
                     <div className="w-full max-[1000px]:relative img-container-vid max-[1000px]:rounded-2xl overflow-hidden">
                         <img className="max-[1000px]:absolute max-[1000px]:h-full max-[1000px]:w-full" src={Video} alt="" />

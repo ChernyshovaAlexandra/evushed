@@ -3,7 +3,7 @@ import mainBg from '../assets/images/Rays.png'
 import { animated } from '@react-spring/web'
 
 
-const Heading = ({ scrollYProgress, close, mainBgRaysAnim, blue_bg_block_image, main_bg_gradient }) => {
+const Heading = ({ scrollYProgress, showPopup, mainBgRaysAnim, blue_bg_block_image, main_bg_gradient }) => {
     return (
         <animated.section className="main fixed top-0 w-full z-30"
             style={{ touchAction: 'none', height: '100vh', zIndex: scrollYProgress.to(s => (s > .1 ? '10' : '100')) }} >
@@ -24,7 +24,7 @@ const Heading = ({ scrollYProgress, close, mainBgRaysAnim, blue_bg_block_image, 
                         opacity: blue_bg_block_image.opacity
                     }} src={mainBg} alt="" />
 
-                <div className="contentpx-12 main-text left-0 right-0 h-fit absolute mx-auto w-full">
+                <div className="content px-12 main-text left-0 right-0 h-fit absolute mx-auto w-full">
                     <div className="pb-8 mx-auto">
                         <animated.h1
                             style={{ opacity: mainBgRaysAnim.opacity }}
@@ -66,7 +66,7 @@ const Heading = ({ scrollYProgress, close, mainBgRaysAnim, blue_bg_block_image, 
                             className={`mt-12 mx-auto w-fit text-white text-center text-xl`}>
                             <p className="font-bold">Люди с ослабленным иммунитетом могут нуждаться<br /> в дополнительной защите от коронавирусной инфекции.<sup>1</sup></p>
                             <p className="font-normal mt-2">Пройдите опрос, чтобы узнать,<br />находитесь ли вы в группе риска </p>
-                            <button className="btn mx-auto block mt-8 " onClick={() => close(true)}>Пройти опрос**</button>
+                            <button className="btn mx-auto block mt-8 " onClick={() => showPopup(true)}>Пройти опрос**</button>
                         </animated.div>
                     </div>
                 </div>

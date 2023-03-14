@@ -63,7 +63,7 @@ const Block8 = ({ }) => {
         swiperEl.initialize();
     }, [])
     return (
-        <section className="min-[1000px]:pb-12 min-[1000px]:pt-36 py-16 bg-blue-grad w-full z-50 relative">
+        <section className="min-[1000px]:pb-12 min-[1000px]:pt-36 py-16 bg-blue-grad w-full z-50 relative" id="risk_groups">
             <div className="contentmin-[1000px]:mx-auto max-[1000px]:w-11/12 min-[1000px]:px-12 px-5">
                 <h2 className="font-normal text-4xl text-white header-sec">Кому может быть необходима<br /> пассивная иммунизация от Covid-19?</h2>
             </div>

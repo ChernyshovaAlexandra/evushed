@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Icon from "./Icon";
 
 
-const Popup = ({ close }) => {
+const Popup = ({ showPopup }) => {
     const ref = useRef(null);
     const [check, setChecked] = useState(0);
     const [result, showResult] = useState(false)
@@ -17,9 +17,9 @@ const Popup = ({ close }) => {
     }
 
     return (
-        <div className="modal fixed top-0 w-full popup-contentgrid place-items-center" >
+        <div className="fixed top-0 w-full popup-container grid place-items-center" style={{ zIndex: 9999 }}>
             <div className={`popup-inner relative xl:p-8 p-4 pt-16 bg-white rounded-lg  ${result ? 'setDisplayPopup' : ''}`}>
-                <div className="closebtn absolute top-4 right-4 cursor-pointer" onClick={() => close(false)}>
+                <div className="closebtn absolute top-4 right-4 cursor-pointer" onClick={() => showPopup(false)}>
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 6L6 18" stroke="#AAABAE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M6 6L18 18" stroke="#AAABAE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -46,9 +46,9 @@ const Popup = ({ close }) => {
                             {result === 'risk' ? `Возможно, Вы находитесь в группе риска тяжелого течения COVID-19` : `Вы скорее всего не находитесь в группе повышенного риска тяжелого течения COVID-19`}
                         </h2>
                         <p className="text-center text-gray min-[1000px]:w-9/12 block mx-auto">
-                            {result==='risk' ? `Обратитесь к специалисту для консультации по поводу дополнительной защиты от коронавирусной инфекции`: `Тем не менее рекомендуем Вам следовать рекомендациям по профилактике коронавирусной инфекции`}
-                            </p>
-                        <button onClick={() => close(false)} className="btn text-white mx-auto mt-8 block">{result==='risk' ? `О дополнительной защите` : `Методы профилактики`}</button>
+                            {result === 'risk' ? `Обратитесь к специалисту для консультации по поводу дополнительной защиты от коронавирусной инфекции` : `Тем не менее рекомендуем Вам следовать рекомендациям по профилактике коронавирусной инфекции`}
+                        </p>
+                        <button onClick={() => showPopup(false)} className="btn text-white mx-auto mt-8 block">{result === 'risk' ? `О дополнительной защите` : `Методы профилактики`}</button>
                     </div>
                     :
                     <div className="popup-inner_content">

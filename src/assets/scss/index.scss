@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    scroll-behavior: smooth
 }
 
 @import "./colors";
@@ -12,6 +13,7 @@
     width: 100vw;
     overflow-x: hidden;
 }
+
 h1,
 .header {
     @include header;
@@ -19,14 +21,14 @@ h1,
     letter-spacing: 0.8px;
     &.f-small {
         font-size: 2.75rem !important;
-        @media screen and (min-width:320px){
-            font-size: 2rem!important;
+        @media screen and (min-width: 320px) {
+            font-size: 2rem !important;
         }
-        @media screen and (min-width:360px){
-            font-size: 2.5rem!important;
+        @media screen and (min-width: 360px) {
+            font-size: 2.5rem !important;
         }
-        @media screen and (min-width:400px){
-            font-size: 2.5rem!important;
+        @media screen and (min-width: 400px) {
+            font-size: 2.75rem !important;
         }
     }
 }
@@ -315,8 +317,8 @@ p {
         }
     }
 }
-.description{
-    @media screen and (min-width:650px){
+.description {
+    @media screen and (min-width: 650px) {
         max-width: 65%;
         margin: 0 auto;
     }
@@ -339,11 +341,17 @@ p {
         &2 {
             border: 2px solid #fff;
             background: transparent;
+            &:hover {
+                background: #fbdde5!important;
+            }
         }
         &:hover {
-            background: #fbdde5;
+            background: #fbdde5!important;
         }
     }
+}
+.about-vac {
+    background: linear-gradient(180deg, #0f072c 0%, #092477 100%);
 }
 .h {
     &-100vh {
@@ -431,7 +439,7 @@ hr.bg-blue {
     }
 }
 .blur {
-    &-2px {
+    &-\2px {
         filter: blur(2px);
     }
 }
@@ -596,6 +604,11 @@ hr.bg-blue {
         border-style: solid;
         border-width: 15vh 0 15vh 78vh;
         border-color: transparent transparent transparent rgb(12, 50, 165);
+        &.small {
+            border-width: 13vh 0 13vh 65vh;
+            top: -25vh;
+            left: -10rem;
+        }
     }
     &-2 {
         width: 0;
@@ -617,6 +630,9 @@ hr.bg-blue {
             top: -50vh;
             background: #0c32a5;
         }
+        &.small {
+            right: -26%;
+        }
     }
 }
 .round {
@@ -630,6 +646,9 @@ hr.bg-blue {
         background: #2eb7f2;
         opacity: 0.5;
         border-radius: 10rem;
+        &.small {
+            bottom: 0rem;
+        }
     }
 }
 .oval-b11 {

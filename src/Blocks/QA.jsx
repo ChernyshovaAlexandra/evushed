@@ -5,8 +5,8 @@ import Accordeon from "../components/Accordeon";
 
 const QA = () => {
     return (
-        <section className="bg-lavender min-[1000px]:p-12 px-6 py-12">
-            <div className="contentmx-auto">
+        <section className="bg-lavender min-[1000px]:p-12 px-6 py-12" id="q_a">
+            <div className="content mx-auto">
                 <div className="min-[1000px]:flex gap-4 justify-between">
                     <div>
                         <h2 className="text-blue min-[1000px]:text-black font-bold header-sec">Частые<br className="min-[1000px]:block hidden" /> вопросы</h2>

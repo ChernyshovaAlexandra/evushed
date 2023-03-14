@@ -2,7 +2,7 @@ import React from "react";
 import { animated } from '@react-spring/web'
 import { coordinates } from "../assets/constants/coordinates";
 
-const Nav = ({ close, scrollYProgress }) => {
+const Nav = ({ showPopup, scrollYProgress }) => {
     return (
         <animated.nav className="text-white rounded-full fixed top-6 left-0 right-0 z-30 mx-auto w-11/12 p-4"
             style={{
@@ -35,22 +35,31 @@ const Nav = ({ close, scrollYProgress }) => {
                             color: scrollYProgress.to(s => (s > coordinates.block5.coordinates[0] && s < coordinates.block5.coordinates[1] || s > coordinates.block7.coordinates[0] ? '#030C26' : 'white'))
                         }}
                     >
-                        <li className="min-[1350px]:text-xl min-[1550px]:text-2xl font-bold"><a href="">Спектр защиты</a></li>
-                        <li className="min-[1350px]:text-xl min-[1550px]:text-2xl font-bold"><a href="">Группы риска</a></li>
-                        <li className="min-[1350px]:text-xl min-[1550px]:text-2xl font-bold"><a href="">Частые вопросы</a></li>
+                        <li className="min-[1350px]:text-xl min-[1550px]:text-2xl font-bold">
+                            <a href="#spectrum_of_protection"
+                                onClick={() => window.scrollTo(0, 2 * window.innerHeight)}
+                            >Спектр защиты</a>
+                        </li>
+                        <li className="min-[1350px]:text-xl min-[1550px]:text-2xl font-bold">
+                            <a href="#risk_groups">Группы риска</a>
+                        </li>
+                        <li className="min-[1350px]:text-xl min-[1550px]:text-2xl font-bold">
+                            <a href="#q_a">Частые вопросы</a>
+                        </li>
                         <li className="ml-3">
                             <animated.button
                                 style={{
                                     color: scrollYProgress.to(s => (s > coordinates.block5.coordinates[0] && s < coordinates.block5.coordinates[1] || s > coordinates.block7.coordinates[0] ? '#f11952' : '')),
                                     borderColor: scrollYProgress.to(s => (s > coordinates.block5.coordinates[0] && s < coordinates.block5.coordinates[1] || s > coordinates.block7.coordinates[0] ? '#f11952' : 'white'))
                                 }}
-                                onClick={() => close(true)} className="btn-transparent2 btn">Пройти опрос**</animated.button>
+                                onClick={() => showPopup(true)}
+                                className="btn-transparent2 btn">Пройти опрос**</animated.button>
                         </li>
                     </animated.ul>
 
                 </div>
             </div>
-        </animated.nav>
+        </animated.nav >
     )
 }
 

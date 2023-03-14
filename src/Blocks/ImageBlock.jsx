@@ -4,11 +4,11 @@ import Block4 from "./Block4";
 
 
 
-const ImageBlock = ({ close, spectrZashityAll, raysSpectrTwoBlue, scrollYProgress, raysSpectrOneBlue, raysSpectrTwoWhite }) => {
+const ImageBlock = ({ showPopup, spectrZashityAll, raysSpectrTwoBlue, scrollYProgress, raysSpectrOneBlue, raysSpectrTwoWhite }) => {
     const containerRef = useRef(null);
     return (
-        <div className="w-full h-full" ref={containerRef}>
-            <Block4 close={close} spectrZashityAll={spectrZashityAll} raysSpectrOneBlue={raysSpectrOneBlue} raysSpectrTwoBlue={raysSpectrTwoBlue} raysSpectrTwoWhite={raysSpectrTwoWhite} scrollYProgress={scrollYProgress} />
+        <div className="w-full h-full" ref={containerRef} id="spectrum_of_protection">
+            <Block4 showPopup={showPopup} spectrZashityAll={spectrZashityAll} raysSpectrOneBlue={raysSpectrOneBlue} raysSpectrTwoBlue={raysSpectrTwoBlue} raysSpectrTwoWhite={raysSpectrTwoWhite} scrollYProgress={scrollYProgress} />
         </div >
     )
 }

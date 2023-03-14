@@ -12,7 +12,7 @@ import docAfter from '../assets/images/doctor-after.png'
 import docAfterL from '../assets/images/doctor-after-light.png'
 import { coordinates } from "../assets/constants/coordinates";
 
-const Block4 = ({ close, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTwoBlue, spectrZashityAll, scrollYProgress }) => {
+const Block4 = ({ showPopup, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTwoBlue, spectrZashityAll, scrollYProgress }) => {
     const props = { initial: { opacity: 0, transition: { duration: .2, delay: .2 } }, animated: { opacity: 1, transition: { duration: .2, delay: .2 } } }
 
     return (
@@ -71,7 +71,7 @@ const Block4 = ({ close, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTwoBlu
                             </animated.div>
                         </div>
                         <motion.div variants={props} initial="initial" whileInView='animated' className="header-btn">
-                            <button style={{ zIndex: '998' }} className="btn  relative" onClick={() => close(true)}>Узнать больше</button>
+                            <button style={{ zIndex: '998' }} className="btn  relative" onClick={() => showPopup(true)}>Узнать больше</button>
                         </motion.div>
                     </div>
 

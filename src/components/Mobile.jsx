@@ -13,16 +13,24 @@ import QA from "../Blocks/QA";
 import Block11 from "../Blocks/Block11";
 import Block12 from "../Blocks/Block12";
 import Block13 from "../Blocks/Block13";
-import { animated } from '@react-spring/web'
+import { useSpring, animated } from '@react-spring/web'
 
 
 
 
-const Mobile = ({ close, showModal, scrollYProgress }) => {
+const Mobile = ({ showPopup, showModal, scrollYProgress }) => {
     const [menu, showMenu] = useState(false)
     const toggleMenu = () => {
         showMenu(!menu)
     }
+
+    const [textApear, api2] = useSpring(
+        () => ({
+            from: { opacity: '0', transition: '.25s all .15s ease-in-out' },
+            to: { opacity: '1', transition: '.25s all .15s ease-in-out' }
+        }),
+        []
+    )
     return (
         <>
             <nav className="fixed top-4 w-full z-20 flex justify-between px-5 items-center" style={{ zIndex: 80 }}>
@@ -61,22 +69,29 @@ const Mobile = ({ close, showModal, scrollYProgress }) => {
             <div className={`content bg-lavender relative ${menu ? 'overflow-hidden' : ''}`}>
                 <main className="text-white relative">
                     <div className="w-full">
-                        <img className="object-cover" src={rays} alt="" style={{ height: '100vh', width: '100%' }} />
+                        <img className="object-cover w-full h-100vh" src={rays} alt="" />
                     </div>
-                    <div className="content absolute top-0 left-0 right-0 bottom-0 m-auto h-fit">
+                    <animated.div
+                        style={textApear}
+                        className="content absolute top-0 left-0 right-0 bottom-0 m-auto h-fit">
                         <h1 className="text-center f-small mb-8 px-5">Весь спектр<br />защиты от Covid-19</h1>
                         <div className="description text-base text-center min-[360px]:px-16 px-10">
                             <p className="font-bold mb-2">Люди с ослабленным иммунитетом могут нуждаться в дополнительной защите от коронавирусной инфекции<sup>1</sup>.</p>
                             <p>Пройдите опрос, чтобы узнать,<br />находитесь ли вы в группе риска</p>
                         </div>
-                        <button className="btn mx-auto block mt-8 " onClick={() => close(true)}>Пройти опрос**</button>
-                    </div>
+                        <button className="btn mx-auto block mt-8 " onClick={() => showPopup(true)}>Пройти опрос**</button>
+                    </animated.div>
                 </main>
 
-                <section className="about-vac relative bg-neonBlue text-white px-6 py-16">
+                <section className="about-vac relative text-white px-6 py-16 h-100vh overflow-hidden flex flex-col">
+                    <div className="absolute left-0 top-0 w-full h-100vh overflow-hidden">
+                        <div className="triangle-1 small"></div>
+                        <div className="triangle-2 small" />
+                        <div className="round-1 small"></div>
+                    </div>
                     <animated.section className="sec-image absolute top-0 w-full h-full left-0 z-50"
                         style={{
-                            transition: 'all .6s ease-out',
+                            transition: '.3s all .7s ease-out',
                             transform: scrollYProgress.to(s => (s > .06 && s < .2 ? 'translateX(100%)' : '')),
 
                         }}
@@ -91,15 +106,18 @@ const Mobile = ({ close, showModal, scrollYProgress }) => {
                             }}
                         />
                     </animated.section>
-                    <div className=" text-lg font-bold spacing-05 uppercase ">Вакцинация является важной опцией профилактики коронавирусной инфекции, однако не всегда она обеспечивает необходимую защиту.<sup>[1]</sup> Люди со сниженным иммунитетом
-                        <span className="text-pink"> могут нуждаться в дополнительной защите</span> от COVID-19<sup className="text-pink">[2-4]</sup>
-                    </div>
-                    <img className="block mx-auto w-full" src={vac} alt="" />
-                    <div className="flex gap-4 items-center w-10/12 mt-8">
-                        <Icon id={0}
-                            img={`<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.81127 11.5946L15.9464 29L31.0815 11.5946" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 15L15.0583 26.3631C15.3743 27.248 16.6257 27.248 16.9417 26.3631L21 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M15.9463 29L15.9463 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>`} />
-                        <p className="text-white font-bold text-lg">Смотри спектр защиты от COVID-19</p>
-                    </div>
+                    <section className="h-fit my-auto relative">
+                        <div className=" text-lg font-bold spacing-05 uppercase ">Вакцинация является важной опцией профилактики коронавирусной инфекции, однако не всегда она обеспечивает необходимую защиту.<sup>[1]</sup> Люди со сниженным иммунитетом
+                            <span className="text-pink"> могут нуждаться в дополнительной защите</span> от COVID-19<sup className="text-pink">[2-4]</sup>
+                        </div>
+                        <img className=" mx-auto w-full sm:hidden block" style={{ maxWidth: '420px' }} src={vac} alt="" />
+                       
+                    </section>
+                    <div className="flex gap-4 items-center w-10/12 mt-8 relative">
+                            <Icon id={0}
+                                img={`<svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.81127 11.5946L15.9464 29L31.0815 11.5946" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 15L15.0583 26.3631C15.3743 27.248 16.6257 27.248 16.9417 26.3631L21 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M15.9463 29L15.9463 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>`} />
+                            <p className="text-white font-bold text-lg">Смотри спектр защиты от COVID-19</p>
+                        </div>
                 </section>
                 <section className="spectr bg-blue-grad px-6 py-16" id="spectr">
                     <h2 className="text-white uppercase mob relative z-10" style={{
@@ -117,14 +135,14 @@ const Mobile = ({ close, showModal, scrollYProgress }) => {
                         <div className="relative">
                             <h3 className="spacing-05 font-bold text-lg leading-7 uppercase gilroy mb-4">Меры предосторожности</h3>
                             <p className="leading-5 text-sm gilroy font-medium">Соблюдение правил личной гигиены, социальное дистанцирование, использование средств индивидуальной защиты (медицинская маска, респиратор, лицевой щиток и т.д.)  </p>
-                            <button className="btn mt-4 relative" onClick={() => close(true)}>Узнать больше</button>
+                            <button className="btn mt-4 relative" onClick={() => showPopup(true)}>Узнать больше</button>
                         </div>
                     </div>
                     <div className="text-white mt-8">
                         <img className="w-full rounded-xl mb-6" src={m2} alt="" />
                         <h3 className="spacing-05 font-bold text-lg leading-7 uppercase gilroy mb-4">Вакцинация</h3>
                         <p className="leading-5 text-sm gilroy font-medium">Вакцинация является важной опцией профилактики коронавирусной инфекции<sup>3</sup></p>
-                        <button className="btn mt-4 relative" onClick={() => close(true)}>Узнать больше</button>
+                        <button className="btn mt-4 relative" onClick={() => showPopup(true)}>Узнать больше</button>
                     </div>
                     <div className="text-white mt-8">
                         <div className="w-full relative">
@@ -139,7 +157,7 @@ const Mobile = ({ close, showModal, scrollYProgress }) => {
                             <h3 className="spacing-05 font-bold text-lg leading-7 uppercase gilroy mb-4">Пассивная иммунизация</h3>
                             <p className="leading-5 text-sm gilroy font-medium">Пассивная иммунизация является дополнительной мерой защиты для пациентов со сниженным иммунным статусом или противопоказаниями к вакцинации
                                 Спросите у вашего лечащего врача о дополнительной защите от COVID-19<sup>3</sup></p>
-                            <button className="btn mt-4 relative" onClick={() => close(true)}>Узнать больше</button>
+                            <button className="btn mt-4 relative" onClick={() => showPopup(true)}>Узнать больше</button>
                         </div>
                     </div>
                 </section>
