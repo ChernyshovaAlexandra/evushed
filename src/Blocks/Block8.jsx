@@ -37,11 +37,12 @@ const Block8 = ({ }) => {
                 prevEl: prevRef.current,
                 nextEl: nextRef.current,
             },
+            
             breakpoints: {
                 0: {
                     slidesPerView: 1.2,
                     spaceBetween: 1,
-                    pagination: true
+                    pagination: true,
 
                 },
                 640: {
@@ -76,7 +77,7 @@ const Block8 = ({ }) => {
                     ))}
 
                 </swiper-container>
-                <div className="hidden max-[1000px]:flex gap-6 mt-8 p-5">
+                <div className="flex gap-6 mt-8 p-5">
                     <Prev ref={prevRef} />
                     <Next ref={nextRef} />
                 </div>

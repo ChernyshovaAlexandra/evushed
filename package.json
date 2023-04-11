@@ -2,7 +2,7 @@
   "name": "evushed",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/evushed",
+  "homepage": "./",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.33",
     "@react-spring/parallax": "^9.6.1",

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 const Accordeon = ({ data, id }) => {
-    const [opened, setOpened] = useState(id === 0 ? true : false)
+    const [opened, setOpened] = useState(false)
     return (
         <div className="accordion-flush bg-white p-8 rounded-xl mb-6 last:mb-0 relative z-40" >
             <h2>
