@@ -79,7 +79,7 @@ const Mobile = ({ showPopup, showModal, scrollYProgress }) => {
                             <p className="font-bold mb-2">Люди с ослабленным иммунитетом могут нуждаться в дополнительной защите от коронавирусной инфекции<sup>1</sup>.</p>
                             <p>Пройдите опрос, чтобы узнать,<br />находитесь ли вы в группе риска</p>
                         </div>
-                        <button className="btn mx-auto block mt-8 " onClick={() => showPopup(true)}>Пройти опрос**</button>
+                        <button className="btn mx-auto block mt-8 " onClick={() => showPopup('opros')}>Пройти опрос**</button>
                     </animated.div>
                 </main>
 

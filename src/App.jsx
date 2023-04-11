@@ -133,7 +133,7 @@ const App = () => {
           </div>
         }
       </div>
-      {popup ? <Popup showPopup={showPopup} /> : null}
+      {popup ? <Popup showPopup={showPopup} popup={popup} /> : null}
       {modal ? <Modal content={modal} close={showModal} /> : null}
       {
         cookies ? null :

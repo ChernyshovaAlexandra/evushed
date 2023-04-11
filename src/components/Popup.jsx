@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Icon from "./Icon";
 
 
-const Popup = ({ showPopup }) => {
+const Popup = ({ showPopup, popup }) => {
     const ref = useRef(null);
     const [check, setChecked] = useState(0);
     const [result, showResult] = useState(false)
@@ -15,10 +15,9 @@ const Popup = ({ showPopup }) => {
             showResult('no-risk')
         }
     }
-
     return (
         <div className="fixed top-0 w-full popup-container grid place-items-center" style={{ zIndex: 9999 }}>
-            <div className={`popup-inner relative xl:p-8 p-4 pt-16 bg-white rounded-lg  ${result ? 'setDisplayPopup' : ''}`}>
+            <div className={`popup-inner relative xl:p-8 p-4 pt-16 bg-white rounded-lg ${popup === 'opros' ? 'opros' : ''}  ${result ? 'setDisplayPopup' : ''}`}>
                 <div className="closebtn absolute top-4 right-4 cursor-pointer" onClick={() => showPopup(false)}>
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 6L6 18" stroke="#AAABAE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

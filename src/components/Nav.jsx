@@ -52,7 +52,7 @@ const Nav = ({ showPopup, scrollYProgress }) => {
                                     color: scrollYProgress.to(s => (s > coordinates.block5.coordinates[0] && s < coordinates.block5.coordinates[1] || s > coordinates.block7.coordinates[0] ? '#f11952' : '')),
                                     borderColor: scrollYProgress.to(s => (s > coordinates.block5.coordinates[0] && s < coordinates.block5.coordinates[1] || s > coordinates.block7.coordinates[0] ? '#f11952' : 'white'))
                                 }}
-                                onClick={() => showPopup(true)}
+                                onClick={() => showPopup('opros')}
                                 className="btn-transparent2 btn">Пройти опрос**</animated.button>
                         </li>
                     </animated.ul>

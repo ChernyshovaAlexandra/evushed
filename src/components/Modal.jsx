@@ -3,7 +3,6 @@ import React from "react";
 
 
 const Modal = ({ close, content }) => {
-    console.log(content[0]) //contacts reclamacia nezhelat sluzhba
     return (
         <div className={`fixed top-0 w-full popup-container grid place-items-center 
         ${content[0] === 'contacts' || content[0] === 'reclamacia' || content[0] === 'nezhelat' || content[0] === 'sluzhba' ? '' : 'modal'}`}

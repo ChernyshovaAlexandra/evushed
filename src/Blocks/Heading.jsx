@@ -66,7 +66,7 @@ const Heading = ({ scrollYProgress, showPopup, mainBgRaysAnim, blue_bg_block_ima
                             className={`mt-12 mx-auto w-fit text-white text-center text-xl`}>
                             <p className="font-bold">Люди с ослабленным иммунитетом могут нуждаться<br /> в дополнительной защите от коронавирусной инфекции.<sup>1</sup></p>
                             <p className="font-normal mt-2">Пройдите опрос, чтобы узнать,<br />находитесь ли вы в группе риска </p>
-                            <button className="btn mx-auto block mt-8 " onClick={() => showPopup(true)}>Пройти опрос**</button>
+                            <button className="btn mx-auto block mt-8 " onClick={() => showPopup('opros')}>Пройти опрос**</button>
                         </animated.div>
                     </div>
                 </div>

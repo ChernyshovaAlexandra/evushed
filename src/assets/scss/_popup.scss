@@ -15,7 +15,10 @@
         max-height: 100vh;
         overflow-y: auto;
         @media screen and (min-width: 1000px) {
-            max-height: 90vh;
+            max-height: 80vh;
+            &.opros {
+                max-height: 96vh;
+            }
         }
         h2 {
             font-family: "Gilroy";
@@ -77,14 +80,14 @@
         }
     }
 }
-.checkpoint{
-    &-container{
+.checkpoint {
+    &-container {
         @media screen and (max-height: 820px) and (min-width: 900px) {
             padding: 1rem;
-        } 
+        }
     }
     @media screen and (max-height: 820px) and (min-width: 900px) {
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         font-size: 1rem;
     }
 }

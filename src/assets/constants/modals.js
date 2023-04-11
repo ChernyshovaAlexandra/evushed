@@ -12,9 +12,8 @@ export const modals = {
     nezhelat: <Nezhelat_yavleniye />,
     sluzhba: <Sluzhba />,
     politika: <Politika />,
-    number_odobr: '',
-    date_odobr: '',
-    date_finish: ''
+    number_odobr: 'RU-16485',
+    date_odobr: '05.04.2023',
+    date_finish: '05.04.2025'
 }
-
 
