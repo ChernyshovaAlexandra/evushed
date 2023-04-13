@@ -20,13 +20,19 @@ const Block4 = ({ showPopup, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTw
             style={{ height: '100vh', opacity: spectrZashityAll.opacity }}>
             <div className="absolute w-full h-full" style={{ zIndex: 10 }}>
                 <animated.div style={{ display: raysSpectrOneBlue.display }}>
-                    <img className="absolute -bottom-16 blur-2px -right-8 w-4/12" src={docAfter} alt="" />
+                    <img className="absolute -bottom-16 blur-2px -right-8 w-4/12"
+                        style={{ filter: 'hue-rotate(-10deg)' }}
+                        src={docAfter} alt="" />
                 </animated.div>
                 <animated.div style={{ display: raysSpectrTwoWhite.display }}>
-                    <img className="absolute -bottom-16 blur-2px -right-8 w-4/12" src={docAfterL} alt="" />
+                    <img className="absolute -bottom-16 blur-2px -right-8 w-4/12"
+                        style={{ filter: 'hue-rotate(-15deg) brightness(0.85)' }}
+                        src={docAfterL} alt="" />
                 </animated.div>
                 <animated.div style={{ display: raysSpectrTwoBlue.display }}>
-                    <img className="absolute -bottom-16 blur-2px -right-8 w-4/12" src={docAfter} alt="" />
+                    <img
+                        style={{ filter: 'hue-rotate(-10deg)' }}
+                        className="absolute -bottom-16 blur-2px -right-8 w-4/12" src={docAfter} alt="" />
                 </animated.div>
             </div>
             <animated.div

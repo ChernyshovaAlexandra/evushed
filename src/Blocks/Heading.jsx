@@ -21,7 +21,8 @@ const Heading = ({ scrollYProgress, showPopup, mainBgRaysAnim, blue_bg_block_ima
                     style={{
                         transform: mainBgRaysAnim.transform,
                         transition: 'all 0.25s ease-out 0s',
-                        opacity: blue_bg_block_image.opacity
+                        opacity: blue_bg_block_image.opacity,
+                        filter: 'hue-rotate(-15deg) brightness(0.85)'
                     }} src={mainBg} alt="" />
 
                 <div className="content px-12 main-text left-0 right-0 h-fit absolute mx-auto w-full">
