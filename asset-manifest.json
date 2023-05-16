@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "./static/css/main.95a97524.css",
-    "main.js": "./static/js/main.5d6a7fc9.js",
+    "main.css": "./static/css/main.db4e1b0d.css",
+    "main.js": "./static/js/main.35f1074a.js",
     "static/js/787.05f010fb.chunk.js": "./static/js/787.05f010fb.chunk.js",
+    "static/media/1.mp4": "./static/media/1.cc8329b0182e5e370691.mp4",
     "static/media/Rays.png": "./static/media/Rays.ea417a53f478bc8d7a79.png",
     "static/media/mob-img-3.png": "./static/media/mob-img-3.8382c50dd67caf786724.png",
     "static/media/mob-img-1.png": "./static/media/mob-img-1.4746a57ad6a45c237de4.png",
@@ -12,6 +13,7 @@
     "static/media/doctor-after.png": "./static/media/doctor-after.2f3c38b757add9ffcebd.png",
     "static/media/doctor-after-light.png": "./static/media/doctor-after-light.a0997eb70835667e06ef.png",
     "static/media/doctor-1.png": "./static/media/doctor-1.1fdc91770456b776cb49.png",
+    "static/media/raysLbg.jpg": "./static/media/raysLbg.9e11461eb8a75deecdf1.jpg",
     "static/media/vacine.png": "./static/media/vacine.e33ef88a0caf8434b747.png",
     "static/media/video-bg.jpeg": "./static/media/video-bg.6f2810e5fe74438047d4.jpeg",
     "static/media/secBG.jpeg": "./static/media/secBG.4ac35d2fdfaaae0f25f2.jpeg",
@@ -32,17 +34,16 @@
     "static/media/Gilroy-Regular.woff2": "./static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "static/media/mainbg.jpeg": "./static/media/mainbg.acde7d4a782965b73557.jpeg",
     "static/media/patient1.png": "./static/media/patient1.a816ab6a08582aefa2f6.png",
-    "static/media/raysLbg.jpeg": "./static/media/raysLbg.ba5e332f25b66f05dee5.jpeg",
     "static/media/11.jpg": "./static/media/11.112539900a98fd05bb9c.jpg",
     "static/media/rays-mob.svg": "./static/media/rays-mob.368aa130a3ba7ef1e2453183192b0360.svg",
     "index.html": "./index.html",
     "static/media/check.svg": "./static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.95a97524.css.map": "./static/css/main.95a97524.css.map",
-    "main.5d6a7fc9.js.map": "./static/js/main.5d6a7fc9.js.map",
+    "main.db4e1b0d.css.map": "./static/css/main.db4e1b0d.css.map",
+    "main.35f1074a.js.map": "./static/js/main.35f1074a.js.map",
     "787.05f010fb.chunk.js.map": "./static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95a97524.css",
-    "static/js/main.5d6a7fc9.js"
+    "static/css/main.db4e1b0d.css",
+    "static/js/main.35f1074a.js"
   ]
 }
