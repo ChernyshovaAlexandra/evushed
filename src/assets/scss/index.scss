@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 @import "./colors";
@@ -342,11 +342,11 @@ p {
             border: 2px solid #fff;
             background: transparent;
             &:hover {
-                background: #fbdde5!important;
+                background: #fbdde5 !important;
             }
         }
         &:hover {
-            background: #fbdde5!important;
+            background: #fbdde5 !important;
         }
     }
 }
@@ -649,6 +649,11 @@ hr.bg-blue {
         &.small {
             bottom: 0rem;
         }
+    }
+}
+ol {
+    li {
+        list-style-type: decimal;
     }
 }
 .oval-b11 {

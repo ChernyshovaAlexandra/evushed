@@ -5,7 +5,7 @@ import doc2 from '../assets/images/doctor-2.png'
 import tela from '../assets/images/tela.png'
 import { motion } from 'framer-motion'
 import { animated } from '@react-spring/web'
-import RaysL from '../assets/images/raysLbg.jpeg'
+import RaysL from '../assets/images/raysLbg.jpg'
 import Rays from '../assets/images/raysbg.jpeg'
 import { Parallax } from "react-scroll-parallax";
 import docAfter from '../assets/images/doctor-after.png'
