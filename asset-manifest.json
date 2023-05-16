@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.db4e1b0d.css",
-    "main.js": "./static/js/main.f613ef22.js",
+    "main.css": "./static/css/main.514602fe.css",
+    "main.js": "./static/js/main.b2882b1c.js",
     "static/js/787.05f010fb.chunk.js": "./static/js/787.05f010fb.chunk.js",
     "static/media/1.mp4": "./static/media/1.cc8329b0182e5e370691.mp4",
     "static/media/Rays.png": "./static/media/Rays.ea417a53f478bc8d7a79.png",
@@ -11,7 +11,7 @@
     "static/media/doctor-2.png": "./static/media/doctor-2.ed74106e010ede27d451.png",
     "static/media/tela.png": "./static/media/tela.6f4554eed63570574219.png",
     "static/media/doctor-after.png": "./static/media/doctor-after.2f3c38b757add9ffcebd.png",
-    "static/media/doctor-after-light.png": "./static/media/doctor-after-light.a0997eb70835667e06ef.png",
+    "static/media/doctor-after-light.png": "./static/media/doctor-after-light.31cb05eaf4e2df4b0b74.png",
     "static/media/doctor-1.png": "./static/media/doctor-1.1fdc91770456b776cb49.png",
     "static/media/raysLbg.jpg": "./static/media/raysLbg.9e11461eb8a75deecdf1.jpg",
     "static/media/vacine.png": "./static/media/vacine.e33ef88a0caf8434b747.png",
@@ -38,12 +38,12 @@
     "static/media/rays-mob.svg": "./static/media/rays-mob.368aa130a3ba7ef1e2453183192b0360.svg",
     "index.html": "./index.html",
     "static/media/check.svg": "./static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.db4e1b0d.css.map": "./static/css/main.db4e1b0d.css.map",
-    "main.f613ef22.js.map": "./static/js/main.f613ef22.js.map",
+    "main.514602fe.css.map": "./static/css/main.514602fe.css.map",
+    "main.b2882b1c.js.map": "./static/js/main.b2882b1c.js.map",
     "787.05f010fb.chunk.js.map": "./static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db4e1b0d.css",
-    "static/js/main.f613ef22.js"
+    "static/css/main.514602fe.css",
+    "static/js/main.b2882b1c.js"
   ]
 }
