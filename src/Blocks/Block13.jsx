@@ -12,6 +12,7 @@ import { modals } from "../assets/constants/modals";
 const Block13 = ({ showModal }) => {
     return (
         <section className="min-[1000px]:px-20 px-5 py-16 bg-darkBlue text-white relative z-40">
+
             <div className="content mx-auto">
                 <p className="text-sm mt-2 txt-footer">Здесь вам могут помочь с информацией относительно вашего заболевания: </p>
                 <div className="mt-8 grid min-[1100px]:grid-cols-4 min-[600px]:grid-cols-2 gap-8">
@@ -54,6 +55,10 @@ const Block13 = ({ showModal }) => {
                         <div className="col">
                             <p className="txt-footer">Информация</p>
                             <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['politika', modals.politika])}> Политика конфиденциальности</p>
+                            <p className="txt-base mt-2 cursor-pointer hover:underline"
+                                onClick={() => { window.location.href = 'https://policy.cookiereports.com/6a9c2daf-ru' }}>
+                                Политика использования файлов cookie
+                            </p>
                             <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['ogranighenie_otvetstvennosty', modals.ogranighenie_otvetstvennosty])}> Правовая информация</p>
                             <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['contacts', modals.contacts])}> Контактная информация</p>
                             <p className="txt-base mt-2 cursor-pointer hover:underline" onClick={() => showModal(['reclamacia', modals.reclamacia])}> Сообщить о рекламации на лекарственный<br />препарат</p>

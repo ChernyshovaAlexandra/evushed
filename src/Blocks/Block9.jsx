@@ -25,14 +25,16 @@ const Block9 = () => {
                                 </svg>
                             </button>
                         </div> :
-                         <iframe
-                         className="video-player w-full"
-                         src={vid}
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                         allowFullScreen
-                     /> 
-                        // <video className="absolute m-auto top-0 bottom-0 left-0 right-0 w-full h-full" src={vid} ></video>
-                        }
+                        //      <iframe
+                        //      className="video-player w-full"
+                        //      src={vid}
+                        //      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        //      allowFullScreen
+                        //  /> 
+                        <video controls className="video-player w-full">
+                            <source src={vid} type="video/mp4" />
+                        </video >
+                    }
                 </div>
             </div>
         </section>

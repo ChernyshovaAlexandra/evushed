@@ -7,7 +7,6 @@ const Nav = ({ showPopup, scrollYProgress }) => {
         <animated.nav className="text-white rounded-full fixed top-6 left-0 right-0 z-30 mx-auto w-11/12 p-4"
             style={{
                 zIndex: 80,
-
                 background: scrollYProgress.to(s => (s > coordinates.block7.coordinates[0] ? 'rgba(255,255,255,.9)' : ''))
             }}>
             <div className="flex justify-between gap-4 items-center">

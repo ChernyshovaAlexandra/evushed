@@ -33,21 +33,21 @@ const Heading = ({ scrollYProgress, showPopup, mainBgRaysAnim, blue_bg_block_ima
                             <span className="flex gap-2 justify-center">
                                 <animated.span
                                     style={{
-                                        transform: scrollYProgress.to(s => (`translateY(${s * 4700}%)`)),
+                                        transform: scrollYProgress.to(s => s > .01?(`translateY(100%)`): ''),
                                         transition: 'all ease-out .6s'
                                     }}>
                                     Весь
                                 </animated.span>
                                 <animated.span
                                     style={{
-                                        transform: scrollYProgress.to(s => (`translateY(${s * 5900}%)`)),
+                                        transform: scrollYProgress.to(s => s > .01?(`translateY(100%)`): ''),
                                         transition: 'all ease-out .3s'
                                     }}>
                                     спектр
                                 </animated.span>
                                 <animated.span
                                     style={{
-                                        transform: scrollYProgress.to(s => (`translateY(${s * 6900}%)`)),
+                                        transform: scrollYProgress.to(s => s > .01?(`translateY(100%)`): ''),
                                         transition: 'all ease-out 0s'
                                     }}>
                                     защиты
@@ -55,7 +55,7 @@ const Heading = ({ scrollYProgress, showPopup, mainBgRaysAnim, blue_bg_block_ima
                             </span>
                             <span className="flex gap-2 justify-center">
                                 <animated.span style={{
-                                    transform: scrollYProgress.to(s => (`translateY(${s * 4700}%)`)),
+                                  transform: scrollYProgress.to(s => s > .01?(`translateY(100%)`): ''),
                                     transition: 'all ease-out .9s'
                                 }}>
                                     от Covid-19

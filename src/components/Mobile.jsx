@@ -57,10 +57,10 @@ const Mobile = ({ showPopup, showModal, scrollYProgress }) => {
                     menu ?
                         <div className="fixed h-full w-full bg-lavender top-0 left-0" style={{ height: '100vh', zIndex: 1000 }}>
                             <ul className="py-16 px-5 grid items-center text-center text-blue text-lg mt-5">
-                                <li className="pb-5"><a href="#spectr">Спектр защиты</a></li>
-                                <li className="pb-5"><a href="#">Группы риска</a></li>
-                                <li className="pb-5"><a href="#">Частые вопросы</a></li>
-                                <li className="pb-5"><a href="#">Истории пациентов</a></li>
+                                <li onClick={()=>showMenu(false)} className="pb-5"><a href="#spectr">Спектр защиты</a></li>
+                                <li onClick={()=>showMenu(false)} className="pb-5"><a href="#risk_groups">Группы риска</a></li>
+                                <li onClick={()=>showMenu(false)} className="pb-5"><a href="#q_a">Частые вопросы</a></li>
+                                <li onClick={()=>showMenu(false)} className="pb-5"><a href="#">Истории пациентов</a></li>
                             </ul>
                         </div>
                         : ''

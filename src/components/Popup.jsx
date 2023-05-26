@@ -47,7 +47,10 @@ const Popup = ({ showPopup, popup }) => {
                         <p className="text-center text-gray min-[1000px]:w-9/12 block mx-auto">
                             {result === 'risk' ? `Обратитесь к специалисту для консультации по поводу дополнительной защиты от коронавирусной инфекции` : `Тем не менее рекомендуем Вам следовать рекомендациям по профилактике коронавирусной инфекции`}
                         </p>
-                        <button onClick={() => showPopup(false)} className="btn text-white mx-auto mt-8 block">{result === 'risk' ? `О дополнительной защите` : `Методы профилактики`}</button>
+                        <a href="#spectrum_of_protection" onClick={() => {
+                            window.scrollTo(0, 2 * window.innerHeight)
+                            showPopup(false)
+                        }} className="btn w-fit text-white mx-auto mt-8 block">{result === 'risk' ? `О дополнительной защите` : `Методы профилактики`}</a>
                     </div>
                     :
                     <div className="popup-inner_content">

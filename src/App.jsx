@@ -50,7 +50,6 @@ const App = () => {
   const { scrollYProgress } = useScroll({
     constiner: containerRef,
     onChange: ({ value: { scrollYProgress } }) => {
-    
       set_main_bg_gradient.start({
         opacity: scrollYProgress > coordinates.block1.coordinates[0] + .004 ? 0 : 1
       })
@@ -135,7 +134,7 @@ const App = () => {
       </div>
       {popup ? <Popup showPopup={showPopup} popup={popup} /> : null}
       {modal ? <Modal content={modal} close={showModal} /> : null}
-      {
+      {/* {
         cookies ? null :
           <div className="bg-pink text-white fixed bottom-0 left-0 w-full min-[1000px]:px-12 p-5 min-[1000px]:py-8 cookies">
             <div className="min-[1000px]:flex-row flex-col flex gap-4 items-center mx-auto w-11/12">
@@ -146,7 +145,7 @@ const App = () => {
               <button className="btn btn-transparent text-pink shrink-0" onClick={setCookies}>Согласен</button>
             </div>
           </div>
-      }
+      } */}
     </>
   );
 }

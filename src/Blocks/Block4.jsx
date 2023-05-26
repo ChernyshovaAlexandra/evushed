@@ -26,7 +26,7 @@ const Block4 = ({ showPopup, raysSpectrOneBlue, raysSpectrTwoWhite, raysSpectrTw
                 </animated.div>
                 <animated.div style={{ display: raysSpectrTwoWhite.display }}>
                     <img className="absolute -bottom-16 blur-2px -right-8 w-4/12"
-                        style={{ filter: 'hue-rotate(-15deg) brightness(0.85)' }}
+                        // style={{ filter: 'hue-rotate(-15deg) brightness(0.85)' }}
                         src={docAfterL} alt="" />
                 </animated.div>
                 <animated.div style={{ display: raysSpectrTwoBlue.display }}>

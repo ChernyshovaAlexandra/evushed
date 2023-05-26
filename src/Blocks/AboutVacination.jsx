@@ -3,9 +3,7 @@ import { animated } from '@react-spring/web'
 import SecBg from '../assets/images/secBG.jpeg'
 import Block2 from "./Block2";
 import { coordinates } from "../assets/constants/coordinates";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import vac from '../assets/images/vacine.png';
-import Icon from "../components/Icon";
 
 const AboutVacination = ({ blue_bg_block, blue_bg_block_image, scrollYProgress, main_photo_to_right }) => {
     return (
