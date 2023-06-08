@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.90f3be22.css",
-    "main.js": "./static/js/main.089baa48.js",
+    "main.css": "./static/css/main.f7cf6fdf.css",
+    "main.js": "./static/js/main.1bc77212.js",
     "static/js/787.05f010fb.chunk.js": "./static/js/787.05f010fb.chunk.js",
-    "static/media/vid2.mp4": "./static/media/vid2.5577c42676bba299c952.mp4",
     "static/media/1.mp4": "./static/media/1.cc8329b0182e5e370691.mp4",
+    "static/media/covid-final.mp4": "./static/media/covid-final.e745e6c2e5d30021b9cc.mp4",
+    "static/media/vid2.mp4": "./static/media/vid2.54173b4e6a791246ea9d.mp4",
     "static/media/Rays.png": "./static/media/Rays.ea417a53f478bc8d7a79.png",
     "static/media/mob-img-3.png": "./static/media/mob-img-3.8382c50dd67caf786724.png",
     "static/media/mob-img-1.png": "./static/media/mob-img-1.4746a57ad6a45c237de4.png",
@@ -16,6 +17,7 @@
     "static/media/doctor-1.png": "./static/media/doctor-1.1fdc91770456b776cb49.png",
     "static/media/raysLbg.jpg": "./static/media/raysLbg.9e11461eb8a75deecdf1.jpg",
     "static/media/vacine.png": "./static/media/vacine.e33ef88a0caf8434b747.png",
+    "static/media/poster.jpg": "./static/media/poster.3241b1cd37007437adae.jpg",
     "static/media/video-bg.jpeg": "./static/media/video-bg.6f2810e5fe74438047d4.jpeg",
     "static/media/secBG.jpeg": "./static/media/secBG.4ac35d2fdfaaae0f25f2.jpeg",
     "static/media/raysbg.jpeg": "./static/media/raysbg.3f3c0132f373c623cd52.jpeg",
@@ -33,18 +35,17 @@
     "static/media/Gilroy-Semibold.woff2": "./static/media/Gilroy-Semibold.7726b19d33f1b7f4135a.woff2",
     "static/media/patient3.png": "./static/media/patient3.86b3341df692d4f7e5bb.png",
     "static/media/Gilroy-Regular.woff2": "./static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
-    "static/media/mainbg.jpeg": "./static/media/mainbg.acde7d4a782965b73557.jpeg",
     "static/media/patient1.png": "./static/media/patient1.a816ab6a08582aefa2f6.png",
     "static/media/11.jpg": "./static/media/11.112539900a98fd05bb9c.jpg",
     "static/media/rays-mob.svg": "./static/media/rays-mob.368aa130a3ba7ef1e2453183192b0360.svg",
     "index.html": "./index.html",
     "static/media/check.svg": "./static/media/check.5a5fbb2228976561b6a0.svg",
-    "main.90f3be22.css.map": "./static/css/main.90f3be22.css.map",
-    "main.089baa48.js.map": "./static/js/main.089baa48.js.map",
+    "main.f7cf6fdf.css.map": "./static/css/main.f7cf6fdf.css.map",
+    "main.1bc77212.js.map": "./static/js/main.1bc77212.js.map",
     "787.05f010fb.chunk.js.map": "./static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90f3be22.css",
-    "static/js/main.089baa48.js"
+    "static/css/main.f7cf6fdf.css",
+    "static/js/main.1bc77212.js"
   ]
 }
