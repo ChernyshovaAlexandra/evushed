@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.d8d7f462.css",
-    "main.js": "./static/js/main.0c78213e.js",
+    "main.js": "./static/js/main.0b69b6bf.js",
     "static/js/787.05f010fb.chunk.js": "./static/js/787.05f010fb.chunk.js",
     "static/media/1.mp4": "./static/media/1.cc8329b0182e5e370691.mp4",
     "static/media/covid-final.mp4": "./static/media/covid-final.e745e6c2e5d30021b9cc.mp4",
@@ -41,11 +41,11 @@
     "index.html": "./index.html",
     "static/media/check.svg": "./static/media/check.5a5fbb2228976561b6a0.svg",
     "main.d8d7f462.css.map": "./static/css/main.d8d7f462.css.map",
-    "main.0c78213e.js.map": "./static/js/main.0c78213e.js.map",
+    "main.0b69b6bf.js.map": "./static/js/main.0b69b6bf.js.map",
     "787.05f010fb.chunk.js.map": "./static/js/787.05f010fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8d7f462.css",
-    "static/js/main.0c78213e.js"
+    "static/js/main.0b69b6bf.js"
   ]
 }
